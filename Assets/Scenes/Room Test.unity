@@ -155,7 +155,7 @@ MonoBehaviour:
   _curve: {fileID: 1091465279}
   handleStyle: 1
   _handle1: {x: 0, y: -1, z: 0}
-  _handle2: {x: 1, y: 0, z: 0}
+  _handle2: {x: 0, y: 0, z: 0}
 --- !u!4 &2036978
 Transform:
   m_ObjectHideFlags: 0
@@ -402,6 +402,62 @@ MonoBehaviour:
   handleStyle: 1
   _handle1: {x: 1, y: 0, z: 0}
   _handle2: {x: 0, y: 1, z: 0}
+--- !u!1 &419836144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419836146}
+  - component: {fileID: 419836145}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &419836145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419836144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7805f5ddc6d3b2944a70d6826573bf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: a2e2af6291908414990e35084c340c64, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &419836146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419836144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &492803371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -503,8 +559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curve: {fileID: 1091465279}
   handleStyle: 1
-  _handle1: {x: -1, y: 0, z: 0}
-  _handle2: {x: 0, y: -1, z: 0}
+  _handle1: {x: 0, y: 0, z: 0}
+  _handle2: {x: -0.0005440712, y: -0.66226494, z: 0}
 --- !u!4 &591185324
 Transform:
   m_ObjectHideFlags: 0
@@ -831,8 +887,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1144438461}
   - component: {fileID: 1144438460}
-  - component: {fileID: 1144438459}
   - component: {fileID: 1144438462}
+  - component: {fileID: 1144438463}
+  - component: {fileID: 1144438459}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -840,14 +897,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1144438459
-AudioListener:
+--- !u!114 &1144438459
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144438458}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036f58c99b26db94ca48c4700c0ef242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!20 &1144438460
 Camera:
   m_ObjectHideFlags: 0
@@ -938,6 +1001,28 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1144438463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144438458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9ff15bcd651094089a865c898d7704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1378073909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c127b6742c4b5a4a89ffedc03d521b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolution: 8
+  resolution: 12
 --- !u!4 &1595490425
 Transform:
   m_ObjectHideFlags: 0
