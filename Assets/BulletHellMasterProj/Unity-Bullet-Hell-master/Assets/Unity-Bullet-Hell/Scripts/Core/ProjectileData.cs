@@ -11,6 +11,7 @@ namespace BulletHell
         public float Rotation;
         public Color Color;
         public float Scale;
+        public float TimeSpawned;
         public float TimeToLive;
         public float Speed;
 

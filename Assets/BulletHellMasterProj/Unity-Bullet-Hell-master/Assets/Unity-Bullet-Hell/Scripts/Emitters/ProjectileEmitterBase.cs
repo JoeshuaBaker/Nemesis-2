@@ -58,7 +58,7 @@ namespace BulletHell
                 props.ProjectilePrefab = ProjectileManager.Instance.GetProjectilePrefab(0);
         }
 
-        public void Initialize(int size)
+        public virtual void Initialize(int size)
         {
             Projectiles = new Pool<ProjectileData>(size);
             if (props.ProjectilePrefab.Outline != null)
@@ -70,7 +70,7 @@ namespace BulletHell
             PreviousActiveProjectileIndexes = new int[size];
         }
 
-        public void UpdateEmitter(float tick)
+        public virtual void UpdateEmitter(float tick)
         {
             if (props.AutoFire)
             {
@@ -285,6 +285,11 @@ namespace BulletHell
         void OnDisable()
         {
             ClearAllProjectiles();
+        }
+
+        public int GetCapacity()
+        {
+            return Projectiles.Capacity;
         }
 
     }

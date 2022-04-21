@@ -27,6 +27,14 @@ namespace BulletHell
             get { return Available.Count; }
         }
 
+        public int Capacity
+        {
+            get 
+            {
+                return Nodes.Length;
+            }
+        }
+
         public Pool(int capacity)
         {
             Nodes = new Node[capacity];

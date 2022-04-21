@@ -371,7 +371,7 @@ namespace BulletHell
             }
         }
 
-        private void UpdateProjectileNodePulse(float tick, ref ProjectileData data)
+        protected void UpdateProjectileNodePulse(float tick, ref ProjectileData data)
         {
             if (props.UseColorPulse && !props.UseStaticPulse)
             {

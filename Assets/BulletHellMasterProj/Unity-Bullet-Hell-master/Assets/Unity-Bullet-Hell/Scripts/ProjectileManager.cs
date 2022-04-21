@@ -175,7 +175,7 @@ namespace BulletHell
                     }
       
                     EmittersArray[n].Initialize(projectilesToAssign);
-                    ProjectileTypeCounters[EmittersArray[n].props.ProjectilePrefab.Index].TotalProjectilesAssigned += projectilesToAssign;
+                    ProjectileTypeCounters[EmittersArray[n].props.ProjectilePrefab.Index].TotalProjectilesAssigned += EmittersArray[n].GetCapacity();
 
                     EmitterCount++;
                 }
@@ -222,7 +222,7 @@ namespace BulletHell
 
                 // Initialize Emitter pool size
                 emitter.Initialize(projectilesToAssign);
-                ProjectileTypeCounters[emitter.props.ProjectilePrefab.Index].TotalProjectilesAssigned += projectilesToAssign;
+                ProjectileTypeCounters[emitter.props.ProjectilePrefab.Index].TotalProjectilesAssigned += emitter.GetCapacity();
 
                 EmitterCount++;
             }
