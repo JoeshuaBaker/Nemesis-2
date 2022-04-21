@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4BE266BE-CB0C-481D-B997-613E6578DAFE}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{4BE266BE-CB0C-481D-B997-613E6578DAFE}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4BE266BE-CB0C-481D-B997-613E6578DAFE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="SFX" ID="{229E74FC-BE91-4069-9FDA-9C831FCD5943}" ShortID="463199507">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BFC28C40-E84D-4802-8D88-230A6E72B3E8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86E8E67D-1857-4443-9F36-181150391D0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Clap Apple Earpods-3" ID="{CC1E2671-95E4-4D42-959D-0C0116955CF0}">
+							<Language>SFX</Language>
+							<AudioFile>Clap Apple Earpods-3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="23965006"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Clap Apple Earpods-3" ID="{CC1E2671-95E4-4D42-959D-0C0116955CF0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
