@@ -9,7 +9,6 @@ namespace BulletHell
         [SerializeField]
         public GameObject ShapeTemplate;
         private List<Vector3> TemplatePositions;
-
         new void Awake()
         {
             base.Awake();
@@ -37,21 +36,21 @@ namespace BulletHell
                     node = Projectiles.Get();
 
                     node.Item.Position = transform.position + TemplatePositions[n];
-                    node.Item.Scale = Scale;
-                    node.Item.TimeToLive = TimeToLive - leakedTime;
-                    node.Item.Velocity = Speed * Direction.normalized;
+                    node.Item.Scale = props.Scale;
+                    node.Item.TimeToLive = props.TimeToLive - leakedTime;
+                    node.Item.Velocity = props.Speed * props.Direction.normalized;
                     node.Item.Position += node.Item.Velocity * leakedTime;
                     node.Item.Color = new Color(0.6f, 0.7f, 0.6f, 1);
-                    node.Item.Acceleration = Acceleration;
+                    node.Item.Acceleration = props.Acceleration;
 
                     // Setup outline if we have one
-                    if (ProjectilePrefab.Outline != null && DrawOutlines)
+                    if (props.ProjectilePrefab.Outline != null && props.DrawOutlines)
                     {
                         Pool<ProjectileData>.Node outlineNode = ProjectileOutlines.Get();
 
                         outlineNode.Item.Position = node.Item.Position;
-                        outlineNode.Item.Scale = node.Item.Scale + OutlineSize;
-                        outlineNode.Item.Color = OutlineColor.Evaluate(0);
+                        outlineNode.Item.Scale = node.Item.Scale + props.OutlineSize;
+                        outlineNode.Item.Color = props.OutlineColor.Evaluate(0);
 
                         node.Item.Outline = outlineNode;
                     }
@@ -74,7 +73,7 @@ namespace BulletHell
 
 
 
-                Direction = Rotate(Direction, RotationSpeed);
+                props.Direction = Rotate(props.Direction, props.RotationSpeed);
             }
 
             return node;

@@ -17,35 +17,7 @@ namespace BulletHell
         protected Pool<ProjectileData> Projectiles;
         protected Pool<ProjectileData> ProjectileOutlines;
 
-        [Foldout("Appearance", true)]
-        public ProjectilePrefab ProjectilePrefab;
-        [Range(0.01f, 2f)] public float Scale = 0.05f;
-        public Gradient Color;
-
-        [Foldout("General", true)]
-        public float TimeToLive = 5;
-        [Range(0.01f, 5f)] public float CoolOffTime = 0.1f;
-        public bool AutoFire = true;
-        public Vector2 Direction = Vector2.up;        
-        [Range(0.001f, 10f)] public float Speed = 1;
-        [Range(1f, 100f)] public float MaxSpeed = 100;        
-        public float RotationSpeed = 0;        
-        public CollisionDetectionType CollisionDetection = CollisionDetectionType.CircleCast;
-        public bool BounceOffSurfaces = true;        
-        public bool CullProjectilesOutsideCameraBounds = true;
-        public bool IsFixedTimestep = true;
-        [ConditionalField(nameof(IsFixedTimestep)), Range(0.01f, 0.02f)] public float FixedTimestepRate = 0.01f;      
-
-        [Foldout("Outline", true)]
-        public bool DrawOutlines;
-        [ConditionalField(nameof(DrawOutlines)), Range(0.0f, 1f)] public float OutlineSize;
-        [ConditionalField(nameof(DrawOutlines))] public Gradient OutlineColor;
-
-        [Foldout("Modifiers", true)]
-        public Vector2 Gravity = Vector2.zero;
-        [Range(0.0f, 1f)] public float BounceAbsorbtionY;
-        [Range(0.0f, 1f)] public float BounceAbsorbtionX;                  
-        [Range(-10f, 10f)] public float Acceleration = 0;
+        [SerializeField] public EmitterProperties props;
 
         // Current active projectiles from this emitter
         public int ActiveProjectileCount { get; protected set; }
@@ -70,7 +42,7 @@ namespace BulletHell
 
         public void Awake()
         {
-            Interval = CoolOffTime + 0.25f;      // Start with a delay to allow time for scene to load
+            Interval = props.CoolOffTime + 0.25f;      // Start with a delay to allow time for scene to load
             Camera = Camera.main;
             
             ContactFilter = new ContactFilter2D
@@ -82,14 +54,14 @@ namespace BulletHell
             ProjectileManager = ProjectileManager.Instance;
 
             // If projectile type is not set, use default
-            if (ProjectilePrefab == null)
-                ProjectilePrefab = ProjectileManager.Instance.GetProjectilePrefab(0);
+            if (props.ProjectilePrefab == null)
+                props.ProjectilePrefab = ProjectileManager.Instance.GetProjectilePrefab(0);
         }
 
         public void Initialize(int size)
         {
             Projectiles = new Pool<ProjectileData>(size);
-            if (ProjectilePrefab.Outline != null)
+            if (props.ProjectilePrefab.Outline != null)
             {
                 ProjectileOutlines = new Pool<ProjectileData>(size);
             }
@@ -100,7 +72,7 @@ namespace BulletHell
 
         public void UpdateEmitter(float tick)
         {
-            if (AutoFire)
+            if (props.AutoFire)
             {
                 Interval -= tick;
             }
@@ -114,14 +86,14 @@ namespace BulletHell
             }
 
 
-            if (IsFixedTimestep)
+            if (props.IsFixedTimestep)
             {
-                if (AutoFire)
+                if (props.AutoFire)
                 {
                     // Interval has expired
                     while (Interval <= 0)
                     {
-                        Interval += CoolOffTime;
+                        Interval += props.CoolOffTime;
                         // Fixed timestep, we must wait until next fixed frame to fire projectile
                         ProjectilesWaiting++;
                     }
@@ -131,17 +103,17 @@ namespace BulletHell
                 Timer += tick;
 
                 // fixed timestep timer internal loop
-                while (Timer > FixedTimestepRate)
+                while (Timer > props.FixedTimestepRate)
                 {
-                    Timer -= FixedTimestepRate;
-                    UpdateProjectiles(FixedTimestepRate);   // Must call UpdateProjectiles before firing new projectiles
+                    Timer -= props.FixedTimestepRate;
+                    UpdateProjectiles(props.FixedTimestepRate);   // Must call UpdateProjectiles before firing new projectiles
 
-                    if (AutoFire)
+                    if (props.AutoFire)
                     {
                         while (ProjectilesWaiting > 0)
                         {
                             ProjectilesWaiting--;
-                            FireProjectile(Direction, ProjectilesWaiting * FixedTimestepRate);
+                            FireProjectile(props.Direction, ProjectilesWaiting * props.FixedTimestepRate);
                         }
                     }
 
@@ -160,13 +132,13 @@ namespace BulletHell
                 UpdateProjectiles(tick);
                 UpdateBuffers(0);
 
-                if (AutoFire)
+                if (props.AutoFire)
                 {
                     while (Interval <= 0)
                     {
                         float leakedTime = Mathf.Abs(Interval);
-                        Interval += CoolOffTime;
-                        FireProjectile(Direction, leakedTime);
+                        Interval += props.CoolOffTime;
+                        FireProjectile(props.Direction, leakedTime);
                     }
                 }
             }
@@ -198,7 +170,7 @@ namespace BulletHell
             ActiveOutlineCount = 0;
 
             //Update camera planes if needed
-            if (CullProjectilesOutsideCameraBounds)
+            if (props.CullProjectilesOutsideCameraBounds)
             {
                 GeometryUtility.CalculateFrustumPlanes(Camera, Planes);
             }
@@ -233,10 +205,10 @@ namespace BulletHell
 
         protected virtual void UpdateProjectileColor(ref ProjectileData data)
         {
-            data.Color = Color.Evaluate(1 - data.TimeToLive / TimeToLive);
+            data.Color = props.Color.Evaluate(1 - data.TimeToLive / props.TimeToLive);
             if (data.Outline.Item != null)
             {
-                data.Outline.Item.Color = OutlineColor.Evaluate(1 - data.TimeToLive / TimeToLive);
+                data.Outline.Item.Color = props.OutlineColor.Evaluate(1 - data.TimeToLive / props.TimeToLive);
             }
         }
 
@@ -255,7 +227,7 @@ namespace BulletHell
                
                 node.Item.TimeToLive -= tick;
 
-                ProjectileManager.UpdateBufferData(ProjectilePrefab, node.Item);
+                ProjectileManager.UpdateBufferData(props.ProjectilePrefab, node.Item);
                 ActiveProjectileCount++;
             }
 
@@ -271,7 +243,7 @@ namespace BulletHell
                 //handle outline
                 if (node.Item.Outline.Item != null)
                 {
-                    ProjectileManager.UpdateBufferData(ProjectilePrefab.Outline, node.Item.Outline.Item);
+                    ProjectileManager.UpdateBufferData(props.ProjectilePrefab.Outline, node.Item.Outline.Item);
                     ActiveOutlineCount++;
                 }
             }

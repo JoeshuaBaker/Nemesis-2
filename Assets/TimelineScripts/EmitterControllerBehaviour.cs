@@ -4,11 +4,8 @@ using UnityEngine;
 using UnityEngine.Playables;
 
 [System.Serializable]
-public class EmitterBehaviour : PlayableBehaviour
+public class EmitterControllerBehaviour : EmitterTrackBehaviour
 {
-    [System.NonSerialized] public double start;
-    [System.NonSerialized] public double end;
-
     public override void ProcessFrame(Playable playable, FrameData info, object playerData)
     {
         PlayableEmitter emitter = playerData as PlayableEmitter;

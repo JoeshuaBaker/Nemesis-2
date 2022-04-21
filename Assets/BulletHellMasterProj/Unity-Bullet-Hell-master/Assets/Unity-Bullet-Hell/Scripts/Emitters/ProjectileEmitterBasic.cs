@@ -10,14 +10,14 @@ namespace BulletHell
             Pool<ProjectileData>.Node node = Projectiles.Get();
 
             node.Item.Position = transform.position;
-            node.Item.Scale = Scale;
-            node.Item.TimeToLive = TimeToLive - leakedTime;
-            node.Item.Velocity = Speed * Direction.normalized;
+            node.Item.Scale = props.Scale;
+            node.Item.TimeToLive = props.TimeToLive - leakedTime;
+            node.Item.Velocity = props.Speed * props.Direction.normalized;
             node.Item.Position += node.Item.Velocity * leakedTime;
             node.Item.Color = new Color(0.6f, 0.7f, 0.6f, 1);
-            node.Item.Acceleration = Acceleration;
+            node.Item.Acceleration = props.Acceleration;
 
-            Direction = Rotate(Direction, RotationSpeed);
+            props.Direction = Rotate(props.Direction, props.RotationSpeed);
             
             return node;
         }

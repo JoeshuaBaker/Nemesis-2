@@ -13,30 +13,6 @@ namespace BulletHell
         ColorPulse StaticOutlinePulse;
         ColorPulse StaticPulse;
 
-        [Foldout("Appearance", true)]
-        [SerializeField] public bool UseColorPulse;
-        [ConditionalField(nameof(UseColorPulse)), SerializeField] protected float PulseSpeed;
-        [ConditionalField(nameof(UseColorPulse)), SerializeField] protected bool UseStaticPulse;
-
-        [Foldout("Spokes", true)]
-        [Range(1, 10), SerializeField] protected int GroupCount = 1;
-        [Range(0, 1), SerializeField] protected float GroupSpacing = 1;
-        [Range(1, 10), SerializeField] protected int SpokeCount = 3;
-        [Range(0, 100), SerializeField] protected float SpokeSpacing = 25;
-        [SerializeField] protected bool MirrorPairRotation;                                                     
-        [ConditionalField(nameof(MirrorPairRotation)), SerializeField] protected bool PairGroupDirection;       
-
-        [Foldout("Modifiers", true)]
-        [SerializeField] public bool UseFollowTarget;       
-        [ConditionalField(nameof(UseFollowTarget))] public Transform Target;
-        [ConditionalField(nameof(UseFollowTarget))] public FollowTargetType FollowTargetType = FollowTargetType.Homing;
-        [ConditionalField(nameof(UseFollowTarget)), Range(0, 5)] public float FollowIntensity;
-
-        [Foldout("Outline", true)]
-        [SerializeField] protected bool UseOutlineColorPulse;
-        [ConditionalField(nameof(UseOutlineColorPulse)), SerializeField] protected float OutlinePulseSpeed;
-        [ConditionalField(nameof(UseOutlineColorPulse)), SerializeField] protected bool UseOutlineStaticPulse;
-
         private EmitterGroup[] Groups;
         private int LastGroupCountPoll = -1;
         private bool PreviousMirrorPairRotation = false;
@@ -57,26 +33,26 @@ namespace BulletHell
 
         private void RefreshGroups()
         {
-            if (GroupCount > 10)
+            if (props.GroupCount > 10)
             {
-                Debug.Log("Max Group Count is set to 10.  You attempted to set it to " + GroupCount.ToString() + ".");
+                Debug.Log("Max Group Count is set to 10.  You attempted to set it to " + props.GroupCount.ToString() + ".");
                 return;
             }
 
             bool mirror = false;
-            if (Groups == null || LastGroupCountPoll != GroupCount || PreviousMirrorPairRotation != MirrorPairRotation || PreviousPairGroupDirection != PairGroupDirection)
+            if (Groups == null || LastGroupCountPoll != props.GroupCount || PreviousMirrorPairRotation != props.MirrorPairRotation || PreviousPairGroupDirection != props.PairGroupDirection)
             {               
                 // Refresh the groups, they were changed
                 float rotation = 0;
                 for (int n = 0; n < Groups.Length; n++)
                 {
-                    if (n < GroupCount && Groups[n] == null)
+                    if (n < props.GroupCount && Groups[n] == null)
                     {
-                        Groups[n] = new EmitterGroup(Rotate(Direction, rotation).normalized, SpokeCount, SpokeSpacing, mirror);
+                        Groups[n] = new EmitterGroup(Rotate(props.Direction, rotation).normalized, props.SpokeCount, props.SpokeSpacing, mirror);
                     }
-                    else if (n < GroupCount)
+                    else if (n < props.GroupCount)
                     {
-                        Groups[n].Set(Rotate(Direction, rotation).normalized, SpokeCount, SpokeSpacing, mirror);
+                        Groups[n].Set(Rotate(props.Direction, rotation).normalized, props.SpokeCount, props.SpokeSpacing, mirror);
                     }
                     else
                     {
@@ -85,18 +61,18 @@ namespace BulletHell
                     }
 
                     // invert the mirror flag if needed
-                    if (MirrorPairRotation)
+                    if (props.MirrorPairRotation)
                         mirror = !mirror;
 
                     // sets the starting direction of all the groups so we divide by 360 to evenly distribute their direction
                     // Could reduce the scope of the directions here
                     rotation = CalculateGroupRotation(n, rotation);
                 }
-                LastGroupCountPoll = GroupCount;
-                PreviousMirrorPairRotation = MirrorPairRotation;
-                PreviousPairGroupDirection = PairGroupDirection;
+                LastGroupCountPoll = props.GroupCount;
+                PreviousMirrorPairRotation = props.MirrorPairRotation;
+                PreviousPairGroupDirection = props.PairGroupDirection;
             }
-            else if (RotationSpeed == 0)
+            else if (props.RotationSpeed == 0)
             {
                 float rotation = 0;
                 // If rotation speed is locked, then allow to update Direction of groups
@@ -104,7 +80,7 @@ namespace BulletHell
                 {
                     if (Groups[n] != null)
                     {
-                        Groups[n].Direction = Rotate(Direction, rotation).normalized;
+                        Groups[n].Direction = Rotate(props.Direction, rotation).normalized;
                     }
 
                     rotation = CalculateGroupRotation(n, rotation);
@@ -116,59 +92,59 @@ namespace BulletHell
         {
             Pool<ProjectileData>.Node node = new Pool<ProjectileData>.Node();
 
-            Direction = direction;
+            props.Direction = direction;
             RefreshGroups();
 
-            if (!AutoFire)
+            if (!props.AutoFire)
             {
                 if (Interval > 0) return node;
-                else Interval = CoolOffTime;
+                else Interval = props.CoolOffTime;
             }
 
-            for (int g = 0; g < GroupCount; g++)
+            for (int g = 0; g < props.GroupCount; g++)
             {
-                if (Projectiles.AvailableCount >= SpokeCount)
+                if (Projectiles.AvailableCount >= props.SpokeCount)
                 {
                     float rotation = 0;
                     bool left = true;
 
-                    for (int n = 0; n < SpokeCount; n++)
+                    for (int n = 0; n < props.SpokeCount; n++)
                     {
                         node = Projectiles.Get();
 
                         node.Item.Position = transform.position;
-                        node.Item.Speed = Speed;
-                        node.Item.Scale = Scale;
-                        node.Item.TimeToLive = TimeToLive;
-                        node.Item.Gravity = Gravity;
-                        if (UseFollowTarget && FollowTargetType == FollowTargetType.LockOnShot && Target != null)
+                        node.Item.Speed = props.Speed;
+                        node.Item.Scale = props.Scale;
+                        node.Item.TimeToLive = props.TimeToLive;
+                        node.Item.Gravity = props.Gravity;
+                        if (props.UseFollowTarget && props.FollowTargetType == FollowTargetType.LockOnShot && props.Target != null)
                         {
-                            Groups[g].Direction = (Target.transform.position - transform.position).normalized;
+                            Groups[g].Direction = (props.Target.transform.position - transform.position).normalized;
                         }
-                        node.Item.Color = Color.Evaluate(0);
-                        node.Item.Acceleration = Acceleration;
-                        node.Item.FollowTarget = UseFollowTarget;
-                        node.Item.FollowIntensity = FollowIntensity;
-                        node.Item.Target = Target;
+                        node.Item.Color = props.Color.Evaluate(0);
+                        node.Item.Acceleration = props.Acceleration;
+                        node.Item.FollowTarget = props.UseFollowTarget;
+                        node.Item.FollowIntensity = props.FollowIntensity;
+                        node.Item.Target = props.Target;
 
                         if (left)
                         {
-                            node.Item.Velocity = Speed * Rotate(Groups[g].Direction, rotation).normalized;
-                            rotation += SpokeSpacing;
+                            node.Item.Velocity = props.Speed * Rotate(Groups[g].Direction, rotation).normalized;
+                            rotation += props.SpokeSpacing;
                         }
                         else
                         {
-                            node.Item.Velocity = Speed * Rotate(Groups[g].Direction, -rotation).normalized;
+                            node.Item.Velocity = props.Speed * Rotate(Groups[g].Direction, -rotation).normalized;
                         }
 
                         // Setup outline if we have one
-                        if (ProjectilePrefab.Outline != null && DrawOutlines)
+                        if (props.ProjectilePrefab.Outline != null && props.DrawOutlines)
                         {
                             Pool<ProjectileData>.Node outlineNode = ProjectileOutlines.Get();
 
                             outlineNode.Item.Position = node.Item.Position;
-                            outlineNode.Item.Scale = node.Item.Scale + OutlineSize;
-                            outlineNode.Item.Color = OutlineColor.Evaluate(0);
+                            outlineNode.Item.Scale = node.Item.Scale + props.OutlineSize;
+                            outlineNode.Item.Color = props.OutlineColor.Evaluate(0);
                             
                             node.Item.Outline = outlineNode;
                         }
@@ -191,9 +167,9 @@ namespace BulletHell
                     }
 
                     if (Groups[g].InvertRotation)
-                        Groups[g].Direction = Rotate(Groups[g].Direction, -RotationSpeed);
+                        Groups[g].Direction = Rotate(Groups[g].Direction, -props.RotationSpeed);
                     else
-                        Groups[g].Direction = Rotate(Groups[g].Direction, RotationSpeed);
+                        Groups[g].Direction = Rotate(Groups[g].Direction, props.RotationSpeed);
                 }
             }      
 
@@ -202,15 +178,15 @@ namespace BulletHell
 
         public void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(transform.position, Scale);
+            Gizmos.DrawWireSphere(transform.position, props.Scale);
 
             Gizmos.color = UnityEngine.Color.yellow;
 
             float rotation = 0;
 
-            for (int n = 0; n < GroupCount; n++)
+            for (int n = 0; n < props.GroupCount; n++)
             {
-                Vector2 direction = Rotate(Direction, rotation).normalized * (Scale + 0.2f);
+                Vector2 direction = Rotate(props.Direction, rotation).normalized * (props.Scale + 0.2f);
                 Gizmos.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y) + direction);
 
                 rotation = CalculateGroupRotation(n, rotation);
@@ -220,23 +196,23 @@ namespace BulletHell
             rotation = 0;
             float spokeRotation = 0;
             bool left = true;
-            for (int n = 0; n < GroupCount; n++)
+            for (int n = 0; n < props.GroupCount; n++)
             {
-                Vector2 groupDirection = Rotate(Direction, rotation).normalized;
+                Vector2 groupDirection = Rotate(props.Direction, rotation).normalized;
                 spokeRotation = 0;
                 left = true;
 
-                for (int m = 0; m < SpokeCount; m++)
+                for (int m = 0; m < props.SpokeCount; m++)
                 {
                     Vector2 direction = Vector2.zero;
                     if (left)
                     {
-                        direction = Rotate(groupDirection, spokeRotation).normalized * (Scale + 0.15f);
-                        spokeRotation += SpokeSpacing;
+                        direction = Rotate(groupDirection, spokeRotation).normalized * (props.Scale + 0.15f);
+                        spokeRotation += props.SpokeSpacing;
                     }
                     else
                     {
-                        direction = Rotate(groupDirection, -spokeRotation).normalized * (Scale + 0.15f);
+                        direction = Rotate(groupDirection, -spokeRotation).normalized * (props.Scale + 0.15f);
                     }
                     Gizmos.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y) + direction);
 
@@ -249,14 +225,14 @@ namespace BulletHell
 
         private float CalculateGroupRotation(int index, float currentRotation)
         {
-            if (PairGroupDirection)
+            if (props.PairGroupDirection)
             {
                 if (index % 2 == 1)
-                    currentRotation += 360 * GroupSpacing * 2f / GroupCount;
+                    currentRotation += 360 * props.GroupSpacing * 2f / props.GroupCount;
             }
             else
             {
-                currentRotation += 360 * GroupSpacing / GroupCount;
+                currentRotation += 360 * props.GroupSpacing / props.GroupCount;
             }
             return currentRotation;
         }
@@ -282,12 +258,12 @@ namespace BulletHell
                     node.Item.Velocity *= (1 + node.Item.Acceleration * tick);
 
                     // follow target
-                    if (FollowTargetType == FollowTargetType.Homing && node.Item.FollowTarget && node.Item.Target != null)
+                    if (props.FollowTargetType == FollowTargetType.Homing && node.Item.FollowTarget && node.Item.Target != null)
                     {
-                        node.Item.Speed += Acceleration * tick;
-                        node.Item.Speed = Mathf.Clamp(node.Item.Speed, -MaxSpeed, MaxSpeed);
+                        node.Item.Speed += props.Acceleration * tick;
+                        node.Item.Speed = Mathf.Clamp(node.Item.Speed, -props.MaxSpeed, props.MaxSpeed);
 
-                        Vector2 desiredVelocity = (new Vector2(Target.transform.position.x, Target.transform.position.y) - node.Item.Position).normalized;
+                        Vector2 desiredVelocity = (new Vector2(props.Target.transform.position.x, props.Target.transform.position.y) - node.Item.Position).normalized;
                         desiredVelocity *= node.Item.Speed;
 
                         Vector2 steer = desiredVelocity - node.Item.Velocity;
@@ -304,7 +280,7 @@ namespace BulletHell
                     float distance = deltaPosition.magnitude;
 
                     // If flag set - return projectiles that are no longer in view 
-                    if (CullProjectilesOutsideCameraBounds)
+                    if (props.CullProjectilesOutsideCameraBounds)
                     {
                         Bounds bounds = new Bounds(node.Item.Position, new Vector3(node.Item.Scale, node.Item.Scale, node.Item.Scale));
                         if (!GeometryUtility.TestPlanesAABB(Planes, bounds))
@@ -315,26 +291,16 @@ namespace BulletHell
                     }
 
                     float radius = node.Item.Scale / 2f;
-                    /*
-                    if (node.Item.Outline.Item != null)
-                    {
-                        radius = node.Item.Outline.Item.Scale / 2f;
-                    }
-                    else
-                    {*/
-                        
-                    //}
                     
                     // Update foreground and outline color data
-                    //node.Item.Rotation += 1f;
                     UpdateProjectileColor(ref node.Item);
 
                     int result = -1;
-                    if (CollisionDetection == CollisionDetectionType.Raycast)
+                    if (props.CollisionDetection == CollisionDetectionType.Raycast)
                     {
                         result = Physics2D.Raycast(node.Item.Position, deltaPosition, ContactFilter, RaycastHitBuffer, distance);
                     }
-                    else if (CollisionDetection == CollisionDetectionType.CircleCast)
+                    else if (props.CollisionDetection == CollisionDetectionType.CircleCast)
                     {
                         result = Physics2D.CircleCast(node.Item.Position, radius, deltaPosition, ContactFilter, RaycastHitBuffer, distance);
                     }
@@ -350,7 +316,7 @@ namespace BulletHell
                         }
 
                         // Collision was detected, should we bounce off or destroy the projectile?
-                        if (BounceOffSurfaces)
+                        if (props.BounceOffSurfaces)
                         {
                             // Calculate the position the projectile is bouncing off the wall at
                             Vector2 projectedNewPosition = node.Item.Position + (deltaPosition * RaycastHitBuffer[0].fraction);
@@ -371,7 +337,7 @@ namespace BulletHell
                             node.Item.Position += deltaPosition;
 
                             // Absorbs energy from bounce
-                            node.Item.Velocity = new Vector2(node.Item.Velocity.x * (1 - BounceAbsorbtionX), node.Item.Velocity.y * (1 - BounceAbsorbtionY));
+                            node.Item.Velocity = new Vector2(node.Item.Velocity.x * (1 - props.BounceAbsorbtionX), node.Item.Velocity.y * (1 - props.BounceAbsorbtionY));
 
                             //handle outline
                             if (node.Item.Outline.Item != null)
@@ -407,68 +373,68 @@ namespace BulletHell
 
         private void UpdateProjectileNodePulse(float tick, ref ProjectileData data)
         {
-            if (UseColorPulse && !UseStaticPulse)
+            if (props.UseColorPulse && !props.UseStaticPulse)
             {
-                data.Pulse.Update(tick, PulseSpeed);
+                data.Pulse.Update(tick, props.PulseSpeed);
             }
 
-            if (UseOutlineColorPulse && !UseOutlineStaticPulse)
+            if (props.UseOutlineColorPulse && !props.UseOutlineStaticPulse)
             {
-                data.OutlinePulse.Update(tick, OutlinePulseSpeed);
+                data.OutlinePulse.Update(tick, props.OutlinePulseSpeed);
             }
         }
 
         private void UpdateStaticPulses(float tick)
         {
             //projectile pulse
-            if (UseColorPulse && UseStaticPulse)
+            if (props.UseColorPulse && props.UseStaticPulse)
             {
-                StaticPulse.Update(tick, PulseSpeed);
+                StaticPulse.Update(tick, props.PulseSpeed);
             }
 
             //outline pulse
-            if (UseOutlineColorPulse && UseOutlineStaticPulse)
+            if (props.UseOutlineColorPulse && props.UseOutlineStaticPulse)
             {
-                StaticOutlinePulse.Update(tick, OutlinePulseSpeed);
+                StaticOutlinePulse.Update(tick, props.OutlinePulseSpeed);
             }
         }
 
         protected override void UpdateProjectileColor(ref ProjectileData data)
         {
             // foreground
-            if (UseColorPulse)
+            if (props.UseColorPulse)
             {
-                if (UseStaticPulse)
+                if (props.UseStaticPulse)
                 {
-                    data.Color = Color.Evaluate(StaticPulse.Fraction);
+                    data.Color = props.Color.Evaluate(StaticPulse.Fraction);
                 }
                 else
                 {
-                    data.Color = Color.Evaluate(data.Pulse.Fraction);
+                    data.Color = props.Color.Evaluate(data.Pulse.Fraction);
                 }
             }
             else
             {
-                data.Color = Color.Evaluate(1 - data.TimeToLive / TimeToLive);
+                data.Color = props.Color.Evaluate(1 - data.TimeToLive / props.TimeToLive);
             }
 
             //outline
             if (data.Outline.Item != null)
             {
-                if (UseOutlineColorPulse)
+                if (props.UseOutlineColorPulse)
                 {
-                    if (UseOutlineStaticPulse)
+                    if (props.UseOutlineStaticPulse)
                     {
-                        data.Outline.Item.Color = OutlineColor.Evaluate(StaticOutlinePulse.Fraction);
+                        data.Outline.Item.Color = props.OutlineColor.Evaluate(StaticOutlinePulse.Fraction);
                     }
                     else
                     {
-                        data.Outline.Item.Color = OutlineColor.Evaluate(data.OutlinePulse.Fraction);
+                        data.Outline.Item.Color = props.OutlineColor.Evaluate(data.OutlinePulse.Fraction);
                     }
                 }
                 else
                 {
-                    data.Outline.Item.Color = OutlineColor.Evaluate(1 - data.TimeToLive / TimeToLive);
+                    data.Outline.Item.Color = props.OutlineColor.Evaluate(1 - data.TimeToLive / props.TimeToLive);
                 }
             }
         }

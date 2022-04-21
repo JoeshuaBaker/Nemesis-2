@@ -101,11 +101,11 @@ namespace BulletHell
         public void AddEmitter(ProjectileEmitterBase emitter, int allocation)
         {
             // Default projectile if no projectile type set
-            if (emitter.ProjectilePrefab == null)
-                emitter.ProjectilePrefab = GetProjectilePrefab(0);
+            if (emitter.props.ProjectilePrefab == null)
+                emitter.props.ProjectilePrefab = GetProjectilePrefab(0);
 
             // Increment group counter
-            ProjectileTypeCounters[emitter.ProjectilePrefab.Index].TotalGroups++;
+            ProjectileTypeCounters[emitter.props.ProjectilePrefab.Index].TotalGroups++;
 
             // Should be a way to not allocate more than projectile type will allow - across all emitters
             emitter.Initialize(allocation);
@@ -153,11 +153,11 @@ namespace BulletHell
             {
                 EmittersArray[n] = emittersTemp[n];
                 // Default projectile if no projectile type set
-                if (EmittersArray[n].ProjectilePrefab == null)
-                    EmittersArray[n].ProjectilePrefab = GetProjectilePrefab(0);
+                if (EmittersArray[n].props.ProjectilePrefab == null)
+                    EmittersArray[n].props.ProjectilePrefab = GetProjectilePrefab(0);
 
                 // Increment group counter
-                ProjectileTypeCounters[EmittersArray[n].ProjectilePrefab.Index].TotalGroups++;
+                ProjectileTypeCounters[EmittersArray[n].props.ProjectilePrefab.Index].TotalGroups++;
             }
 
             // Initialize the emitters -- if value is set fo projectilePoolSize -- system will use it
@@ -166,7 +166,7 @@ namespace BulletHell
             {
                 if (EmittersArray[n] != null)
                 {
-                    int projectilesToAssign = EmittersArray[n].ProjectilePrefab.GetMaxProjectileCount();
+                    int projectilesToAssign = EmittersArray[n].props.ProjectilePrefab.GetMaxProjectileCount();
 
                     if (projectilesToAssign == -1)
                     {
@@ -175,7 +175,7 @@ namespace BulletHell
                     }
       
                     EmittersArray[n].Initialize(projectilesToAssign);
-                    ProjectileTypeCounters[EmittersArray[n].ProjectilePrefab.Index].TotalProjectilesAssigned += projectilesToAssign;
+                    ProjectileTypeCounters[EmittersArray[n].props.ProjectilePrefab.Index].TotalProjectilesAssigned += projectilesToAssign;
 
                     EmitterCount++;
                 }
@@ -210,9 +210,9 @@ namespace BulletHell
             else
             {
                 EmittersArray[nextEmpty] = emitter;
-                ProjectileTypeCounters[emitter.ProjectilePrefab.Index].TotalGroups++;
+                ProjectileTypeCounters[emitter.props.ProjectilePrefab.Index].TotalGroups++;
 
-                int projectilesToAssign = emitter.ProjectilePrefab.GetMaxProjectileCount();
+                int projectilesToAssign = emitter.props.ProjectilePrefab.GetMaxProjectileCount();
 
                 if (projectilesToAssign == -1)
                 {
@@ -222,7 +222,7 @@ namespace BulletHell
 
                 // Initialize Emitter pool size
                 emitter.Initialize(projectilesToAssign);
-                ProjectileTypeCounters[emitter.ProjectilePrefab.Index].TotalProjectilesAssigned += projectilesToAssign;
+                ProjectileTypeCounters[emitter.props.ProjectilePrefab.Index].TotalProjectilesAssigned += projectilesToAssign;
 
                 EmitterCount++;
             }
@@ -286,11 +286,11 @@ namespace BulletHell
                         EmittersArray[n].UpdateEmitter(Time.deltaTime);
 
                         // Update projectile counters
-                        ProjectileTypeCounters[EmittersArray[n].ProjectilePrefab.Index].ActiveProjectiles += EmittersArray[n].ActiveProjectileCount;
+                        ProjectileTypeCounters[EmittersArray[n].props.ProjectilePrefab.Index].ActiveProjectiles += EmittersArray[n].ActiveProjectileCount;
 
                         // update outlines
-                        if (EmittersArray[n].ProjectilePrefab.Outline != null)
-                            ProjectileTypeCounters[EmittersArray[n].ProjectilePrefab.Outline.Index].ActiveProjectiles += EmittersArray[n].ActiveOutlineCount;
+                        if (EmittersArray[n].props.ProjectilePrefab.Outline != null)
+                            ProjectileTypeCounters[EmittersArray[n].props.ProjectilePrefab.Outline.Index].ActiveProjectiles += EmittersArray[n].ActiveOutlineCount;
                     }
                     else
                     {

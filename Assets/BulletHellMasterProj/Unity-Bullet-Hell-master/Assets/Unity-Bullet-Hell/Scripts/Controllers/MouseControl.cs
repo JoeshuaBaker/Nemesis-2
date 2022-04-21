@@ -23,7 +23,7 @@ public class MouseControl : MonoBehaviour
 
         ChargePreview = transform.Find("ChargePreview").gameObject;
 
-        Emitter.AutoFire = false;
+        Emitter.props.AutoFire = false;
     }
 
     void Update()
@@ -41,7 +41,7 @@ public class MouseControl : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             Vector2 direction = mousePos - new Vector2(this.transform.position.x, this.transform.position.y);
-            Emitter.Scale = Charge / 5f;
+            Emitter.props.Scale = Charge / 5f;
             Emitter.FireProjectile(direction, 0);
             Charge = 0;
         }

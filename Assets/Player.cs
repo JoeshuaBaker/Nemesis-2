@@ -128,7 +128,7 @@ public class Player : MonoBehaviour
 
             spriteRenderer.sprite = sprites[lowestIndex];
             gun.transform.localPosition = xy/3;
-            gun.Direction = xy;
+            gun.props.Direction = xy;
             if(isSplit)
                 dir *= -1;
         }
@@ -141,11 +141,11 @@ public class Player : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.Space))
             {
-                gun.AutoFire = true;
+                gun.props.AutoFire = true;
             }
             else
             {
-                gun.AutoFire = false;
+                gun.props.AutoFire = false;
             }
         }
     }
