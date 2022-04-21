@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	3141129795	Play_SFX			\Default Work Unit\Play_SFX	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	23965006	SFX	C:\Users\Tiller\Documents\__PERSONAL\_GITHUB\Nemesis-2\Bullet Hell_WwiseProject\.cache\Windows\SFX\Clap Apple Earpods-3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX		13192
+	23965006	SFX	C:\Users\Joesh\Perforce\Bullet Hell\Bullet Hell_WwiseProject\.cache\Windows\SFX\Clap Apple Earpods-3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX		13192
 

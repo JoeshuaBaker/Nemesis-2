@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a6190015a8117441af12793e912b48af
     GuidInternal: 
-    m_lastTime: -8585510360806240303
-    List: []
+    m_lastTime: -8585510347751347820
+    List:
+    - name: Sounds
+      guid: ae75aaeba45ea4409d020229b09a152f
+      id: 1492361653
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6190015a8117441af12793e912b48af
+      - ElementName: Sounds
+        ObjectType: 7
+        guid: ae75aaeba45ea4409d020229b09a152f
+      Path: SoundBanks\Default Work Unit\Sounds
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c6a86fcf9e1b834fb22623621508c181
     GuidInternal: 
-    m_lastTime: -8585510360806329931
-    List: []
+    m_lastTime: -8585510347751392785
+    List:
+    - name: Play_SFX
+      guid: 69df3b48ff280e419109af24a486aa6a
+      id: 3141129795
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c6a86fcf9e1b834fb22623621508c181
+      - ElementName: Play_SFX
+        ObjectType: 3
+        guid: 69df3b48ff280e419109af24a486aa6a
+      Path: Events\Default Work Unit\Play_SFX
+      maxAttenuation: 0
+      maxDuration: 0.074422
+      minDuration: 0.074422
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +170,7 @@ MonoBehaviour:
     m_lastTime: -8585510360806230330
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000
+  ExpandedWaapiItemIds: 010000000500000006000000070000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

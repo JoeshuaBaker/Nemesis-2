@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
 		<ProjectRoot>C:\Users\Joesh\Perforce\Bullet Hell\Bullet Hell_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Joesh\Perforce\Bullet Hell\Bullet Hell_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Joesh\Perforce\Bullet Hell\Bullet Hell_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<SourceFilesRoot>C:\Users\Joesh\Perforce\Bullet Hell\Bullet Hell_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Joesh\Perforce\Bullet Hell\Bullet Hell_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Joesh\Perforce\Bullet Hell\Bullet Hell_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Joesh\Perforce\Bullet Hell\Bullet Hell_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
