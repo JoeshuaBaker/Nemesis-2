@@ -13,10 +13,10 @@ namespace BulletHell
         ColorPulse StaticOutlinePulse;
         ColorPulse StaticPulse;
 
-        private EmitterGroup[] Groups;
-        private int LastGroupCountPoll = -1;
-        private bool PreviousMirrorPairRotation = false;
-        private bool PreviousPairGroupDirection = false;
+        protected EmitterGroup[] Groups;
+        protected int LastGroupCountPoll = -1;
+        protected bool PreviousMirrorPairRotation = false;
+        protected bool PreviousPairGroupDirection = false;
 
         public new void Awake()
         {
@@ -31,7 +31,7 @@ namespace BulletHell
             // To allow for the enable / disable checkbox in Inspector
         }
 
-        private void RefreshGroups()
+        protected void RefreshGroups()
         {
             if (props.GroupCount > 10)
             {

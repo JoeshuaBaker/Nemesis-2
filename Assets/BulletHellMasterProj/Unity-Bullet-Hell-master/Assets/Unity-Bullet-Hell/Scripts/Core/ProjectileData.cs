@@ -4,6 +4,7 @@ namespace BulletHell
 {   
     public class ProjectileData
     {
+        public int emitterId;
         public Vector2 Velocity;
         public float Acceleration;
         public Vector2 Gravity;

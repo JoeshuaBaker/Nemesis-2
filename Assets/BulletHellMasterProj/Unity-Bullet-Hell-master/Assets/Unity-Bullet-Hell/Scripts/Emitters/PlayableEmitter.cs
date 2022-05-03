@@ -55,6 +55,8 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
             shootEvents = new List<(double, EmitterProperties)>();
         else
             shootEvents.Clear();
+
+        int emitterId = 0;
         
         foreach(var shoot in shootBehaviours)
         {
@@ -67,8 +69,10 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
                 int propIndex = GetPropertiesIndex(nextShot);
                 if(propIndex == -1)
                 {
-                    shootEvents.Add((nextShot, baseProps));
-                    nextShot += baseProps.CoolOffTime;
+                    EmitterProperties snapshotProps = baseProps.Copy();
+                    snapshotProps.id = emitterId++;
+                    shootEvents.Add((nextShot, snapshotProps));
+                    nextShot += snapshotProps.CoolOffTime;
                 }
                 else
                 {
@@ -93,7 +97,7 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
                         }
                     }
                     
-
+                    snapshotProps.id = emitterId++;
                     shootEvents.Add((nextShot, snapshotProps));
                     nextShot += snapshotProps.CoolOffTime;
                     shots--;
@@ -116,6 +120,7 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
 
         int previousIndexCount = ActiveProjectileIndexesPosition;
         ActiveProjectileIndexesPosition = 0;
+        HashSet<int> activeProjectileIds = new HashSet<int>();
 
         // Only loop through currently active projectiles
         for (int i = 0; i < PreviousActiveProjectileIndexes.Length - 1; i++)
@@ -132,6 +137,17 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
             {
                 ActiveProjectileIndexes[ActiveProjectileIndexesPosition] = node.NodeIndex;
                 ActiveProjectileIndexesPosition++;
+                activeProjectileIds.Add(node.Item.emitterId);
+            }
+        }
+
+        foreach(var shot in shootEvents)
+        {
+            double spawnTime = shot.Item1;
+            EmitterProperties props = shot.Item2;
+            if(!activeProjectileIds.Contains(props.id) && IsProjectileAlive(props, spawnTime, time))
+            {
+
             }
         }
 
@@ -145,138 +161,215 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
     //Copied from ProjectileEmitterAdvanced. Called from UpdateProjectiles. Rewrite to use time.
     protected override void UpdateProjectile(ref Pool<ProjectileData>.Node node, float time)
     {          
-        if (node.Active)
+        // Projectile is active
+        if (IsProjectileAlive(node.Item, time))
         {
-            node.Item.TimeToLive -= time;
-                            
-            // Projectile is active
-            if (node.Item.TimeToLive > 0)
+            UpdateProjectileNodePulse(time, ref node.Item);
+
+            // apply acceleration
+            node.Item.Velocity *= (1 + node.Item.Acceleration * time);
+
+            // follow target
+            if (props.FollowTargetType == FollowTargetType.Homing && node.Item.FollowTarget && node.Item.Target != null)
             {
-                UpdateProjectileNodePulse(time, ref node.Item);
+                node.Item.Speed += props.Acceleration * time;
+                node.Item.Speed = Mathf.Clamp(node.Item.Speed, -props.MaxSpeed, props.MaxSpeed);
 
-                // apply acceleration
-                node.Item.Velocity *= (1 + node.Item.Acceleration * time);
+                Vector2 desiredVelocity = (new Vector2(props.Target.transform.position.x, props.Target.transform.position.y) - node.Item.Position).normalized;
+                desiredVelocity *= node.Item.Speed;
 
-                // follow target
-                if (props.FollowTargetType == FollowTargetType.Homing && node.Item.FollowTarget && node.Item.Target != null)
+                Vector2 steer = desiredVelocity - node.Item.Velocity;
+                node.Item.Velocity = Vector2.ClampMagnitude(node.Item.Velocity + steer * node.Item.FollowIntensity * time, node.Item.Speed);
+            }
+            else
+            {
+                // apply gravity
+                node.Item.Velocity += node.Item.Gravity * time;
+            }
+
+            // calculate where projectile will be at the end of this frame
+            Vector2 deltaPosition = node.Item.Velocity * time;
+            float distance = deltaPosition.magnitude;
+
+            // If flag set - return projectiles that are no longer in view 
+            if (props.CullProjectilesOutsideCameraBounds)
+            {
+                Bounds bounds = new Bounds(node.Item.Position, new Vector3(node.Item.Scale, node.Item.Scale, node.Item.Scale));
+                if (!GeometryUtility.TestPlanesAABB(Planes, bounds))
                 {
-                    node.Item.Speed += props.Acceleration * time;
-                    node.Item.Speed = Mathf.Clamp(node.Item.Speed, -props.MaxSpeed, props.MaxSpeed);
-
-                    Vector2 desiredVelocity = (new Vector2(props.Target.transform.position.x, props.Target.transform.position.y) - node.Item.Position).normalized;
-                    desiredVelocity *= node.Item.Speed;
-
-                    Vector2 steer = desiredVelocity - node.Item.Velocity;
-                    node.Item.Velocity = Vector2.ClampMagnitude(node.Item.Velocity + steer * node.Item.FollowIntensity * time, node.Item.Speed);
+                    ReturnNode(node);
+                    return;
                 }
-                else
+            }
+
+            float radius = node.Item.Scale / 2f;
+            
+            // Update foreground and outline color data
+            UpdateProjectileColor(ref node.Item);
+
+            int result = -1;
+            if (props.CollisionDetection == CollisionDetectionType.Raycast)
+            {
+                result = Physics2D.Raycast(node.Item.Position, deltaPosition, ContactFilter, RaycastHitBuffer, distance);
+            }
+            else if (props.CollisionDetection == CollisionDetectionType.CircleCast)
+            {
+                result = Physics2D.CircleCast(node.Item.Position, radius, deltaPosition, ContactFilter, RaycastHitBuffer, distance);
+            }
+
+            if (result > 0)
+            {
+                // Put whatever hit code you want here such as damage events
+                Player p = null;
+                if((p = RaycastHitBuffer[0].transform.GetComponent<Player>()) != null)
                 {
-                    // apply gravity
-                    node.Item.Velocity += node.Item.Gravity * time;
+                    p.updateHp(-10);
+                    ReturnNode(node);
                 }
 
-                // calculate where projectile will be at the end of this frame
-                Vector2 deltaPosition = node.Item.Velocity * time;
-                float distance = deltaPosition.magnitude;
-
-                // If flag set - return projectiles that are no longer in view 
-                if (props.CullProjectilesOutsideCameraBounds)
+                // Collision was detected, should we bounce off or destroy the projectile?
+                if (props.BounceOffSurfaces)
                 {
-                    Bounds bounds = new Bounds(node.Item.Position, new Vector3(node.Item.Scale, node.Item.Scale, node.Item.Scale));
-                    if (!GeometryUtility.TestPlanesAABB(Planes, bounds))
-                    {
-                        ReturnNode(node);
-                        return;
-                    }
-                }
+                    // Calculate the position the projectile is bouncing off the wall at
+                    Vector2 projectedNewPosition = node.Item.Position + (deltaPosition * RaycastHitBuffer[0].fraction);
+                    Vector2 directionOfHitFromCenter = RaycastHitBuffer[0].point - projectedNewPosition;
+                    float distanceToContact = (RaycastHitBuffer[0].point - projectedNewPosition).magnitude;
+                    float remainder = radius - distanceToContact;
 
-                float radius = node.Item.Scale / 2f;
-                
-                // Update foreground and outline color data
-                UpdateProjectileColor(ref node.Item);
+                    // reposition projectile to the point of impact 
+                    node.Item.Position = projectedNewPosition - (directionOfHitFromCenter.normalized * remainder);
 
-                int result = -1;
-                if (props.CollisionDetection == CollisionDetectionType.Raycast)
-                {
-                    result = Physics2D.Raycast(node.Item.Position, deltaPosition, ContactFilter, RaycastHitBuffer, distance);
-                }
-                else if (props.CollisionDetection == CollisionDetectionType.CircleCast)
-                {
-                    result = Physics2D.CircleCast(node.Item.Position, radius, deltaPosition, ContactFilter, RaycastHitBuffer, distance);
-                }
+                    // reflect the velocity for a bounce effect -- will work well on static surfaces
+                    node.Item.Velocity = Vector2.Reflect(node.Item.Velocity, RaycastHitBuffer[0].normal);
 
-                if (result > 0)
-                {
-                    // Put whatever hit code you want here such as damage events
-                    Player p = null;
-                    if((p = RaycastHitBuffer[0].transform.GetComponent<Player>()) != null)
-                    {
-                        p.updateHp(-10);
-                        ReturnNode(node);
-                    }
+                    // calculate remaining distance after bounce
+                    deltaPosition = node.Item.Velocity * time * (1 - RaycastHitBuffer[0].fraction);
 
-                    // Collision was detected, should we bounce off or destroy the projectile?
-                    if (props.BounceOffSurfaces)
-                    {
-                        // Calculate the position the projectile is bouncing off the wall at
-                        Vector2 projectedNewPosition = node.Item.Position + (deltaPosition * RaycastHitBuffer[0].fraction);
-                        Vector2 directionOfHitFromCenter = RaycastHitBuffer[0].point - projectedNewPosition;
-                        float distanceToContact = (RaycastHitBuffer[0].point - projectedNewPosition).magnitude;
-                        float remainder = radius - distanceToContact;
-
-                        // reposition projectile to the point of impact 
-                        node.Item.Position = projectedNewPosition - (directionOfHitFromCenter.normalized * remainder);
-
-                        // reflect the velocity for a bounce effect -- will work well on static surfaces
-                        node.Item.Velocity = Vector2.Reflect(node.Item.Velocity, RaycastHitBuffer[0].normal);
-
-                        // calculate remaining distance after bounce
-                        deltaPosition = node.Item.Velocity * time * (1 - RaycastHitBuffer[0].fraction);
-
-                        // When gravity is applied, the positional change here is actually parabolic
-                        node.Item.Position += deltaPosition;
-
-                        // Absorbs energy from bounce
-                        node.Item.Velocity = new Vector2(node.Item.Velocity.x * (1 - props.BounceAbsorbtionX), node.Item.Velocity.y * (1 - props.BounceAbsorbtionY));
-
-                        //handle outline
-                        if (node.Item.Outline.Item != null)
-                        {
-                            node.Item.Outline.Item.Position = node.Item.Position;
-                        }                      
-                    }
-                    else
-                    {
-                        ReturnNode(node);
-                    }
-                }
-                else
-                {
-                    //No collision -move projectile
+                    // When gravity is applied, the positional change here is actually parabolic
                     node.Item.Position += deltaPosition;
-                    UpdateProjectileColor(ref node.Item);
 
-                    // Update outline position
+                    // Absorbs energy from bounce
+                    node.Item.Velocity = new Vector2(node.Item.Velocity.x * (1 - props.BounceAbsorbtionX), node.Item.Velocity.y * (1 - props.BounceAbsorbtionY));
+
+                    //handle outline
                     if (node.Item.Outline.Item != null)
                     {
                         node.Item.Outline.Item.Position = node.Item.Position;
-                    }                   
+                    }                      
+                }
+                else
+                {
+                    ReturnNode(node);
                 }
             }
             else
             {
-                // End of life - return to pool
-                ReturnNode(node);
+                //No collision -move projectile
+                node.Item.Position += deltaPosition;
+                UpdateProjectileColor(ref node.Item);
+
+                // Update outline position
+                if (node.Item.Outline.Item != null)
+                {
+                    node.Item.Outline.Item.Position = node.Item.Position;
+                }                   
             }
         }
+        else
+        {
+            // End of life - return to pool
+            ReturnNode(node);
+        }
+    }
+
+    public Pool<ProjectileData>.Node FireProjectile(EmitterProperties props, Vector2 direction, double spawnTime)
+    {
+        Pool<ProjectileData>.Node node = new Pool<ProjectileData>.Node();
+
+        props.Direction = direction;
+        RefreshGroups();
+
+        for (int g = 0; g < props.GroupCount; g++)
+        {
+            if (Projectiles.AvailableCount >= props.SpokeCount)
+            {
+                float rotation = 0;
+                bool left = true;
+
+                for (int n = 0; n < props.SpokeCount; n++)
+                {
+                    node = Projectiles.Get();
+
+                    node.Item.Position = transform.position;
+                    node.Item.Speed = props.Speed;
+                    node.Item.Scale = props.Scale;
+                    node.Item.TimeToLive = props.TimeToLive;
+                    node.Item.Gravity = props.Gravity;
+                    if (props.UseFollowTarget && props.FollowTargetType == FollowTargetType.LockOnShot && props.Target != null)
+                    {
+                        Groups[g].Direction = (props.Target.transform.position - transform.position).normalized;
+                    }
+                    node.Item.Color = props.Color.Evaluate(0);
+                    node.Item.Acceleration = props.Acceleration;
+                    node.Item.FollowTarget = props.UseFollowTarget;
+                    node.Item.FollowIntensity = props.FollowIntensity;
+                    node.Item.Target = props.Target;
+                    node.Item.TimeSpawned = (float)spawnTime;
+                    node.Item.emitterId = props.id;
+
+                    if (left)
+                    {
+                        node.Item.Velocity = props.Speed * Rotate(Groups[g].Direction, rotation).normalized;
+                        rotation += props.SpokeSpacing;
+                    }
+                    else
+                    {
+                        node.Item.Velocity = props.Speed * Rotate(Groups[g].Direction, -rotation).normalized;
+                    }
+
+                    // Setup outline if we have one
+                    if (props.ProjectilePrefab.Outline != null && props.DrawOutlines)
+                    {
+                        Pool<ProjectileData>.Node outlineNode = ProjectileOutlines.Get();
+
+                        outlineNode.Item.Position = node.Item.Position;
+                        outlineNode.Item.Scale = node.Item.Scale + props.OutlineSize;
+                        outlineNode.Item.Color = props.OutlineColor.Evaluate(0);
+                        
+                        node.Item.Outline = outlineNode;
+                    }
+
+                    // Keep track of active projectiles                       
+                    PreviousActiveProjectileIndexes[ActiveProjectileIndexesPosition] = node.NodeIndex;
+                    ActiveProjectileIndexesPosition++;
+                    if (ActiveProjectileIndexesPosition < ActiveProjectileIndexes.Length)
+                    {
+                        PreviousActiveProjectileIndexes[ActiveProjectileIndexesPosition] = -1;
+                    }
+                    else
+                    {
+                        Debug.Log("Error: Projectile was fired before list of active projectiles was refreshed.");
+                    }
+
+                    //UpdateProjectile(ref node, 0);
+
+                    left = !left;
+                }
+
+                if (Groups[g].InvertRotation)
+                    Groups[g].Direction = Rotate(Groups[g].Direction, -props.RotationSpeed);
+                else
+                    Groups[g].Direction = Rotate(Groups[g].Direction, props.RotationSpeed);
+            }
+        }      
+
+        return node;
     }
 
     public void PlayableUpdate(double t, double start, double end)
     {
         UpdateProjectiles((float)t);
     }
-
-    
 
     private int GetPropertiesIndex(double time)
     {
@@ -310,5 +403,15 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
         {
             field.SetValue(snapshotProps, (f != 0f));
         }
+    }
+
+    private bool IsProjectileAlive(ProjectileData projectile, float time)
+    {
+        return time > projectile.TimeSpawned && time < projectile.TimeSpawned + projectile.TimeToLive;
+    }
+
+    private bool IsProjectileAlive(EmitterProperties projectile, double spawnTime, float time)
+    {
+        return time > spawnTime && time < spawnTime + projectile.TimeToLive;
     }
 }
