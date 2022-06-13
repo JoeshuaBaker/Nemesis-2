@@ -68,6 +68,7 @@ namespace BulletHell
 
             ActiveProjectileIndexes = new int[size];
             PreviousActiveProjectileIndexes = new int[size];
+            ProjectileManager = ProjectileManager.Instance;
         }
 
         public virtual void UpdateEmitter(float tick)
@@ -165,7 +166,6 @@ namespace BulletHell
 
         protected virtual void UpdateProjectiles(float tick)
         {
-
             ActiveProjectileCount = 0;
             ActiveOutlineCount = 0;
 
@@ -212,7 +212,7 @@ namespace BulletHell
             }
         }
 
-        protected void UpdateBuffers(float tick)
+        protected virtual void UpdateBuffers(float tick)
         {
             ActiveProjectileCount = 0;
             ActiveOutlineCount = 0;
@@ -280,6 +280,7 @@ namespace BulletHell
             }
 
             ActiveProjectileIndexesPosition = 0;
+            Debug.Log("ClearAllProjectiles called.");
         }
         
         void OnDisable()

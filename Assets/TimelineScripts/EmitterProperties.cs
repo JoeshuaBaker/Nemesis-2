@@ -36,7 +36,8 @@ public class EmitterProperties : EmitterTrackBehaviour
     [FoldoutGroup("General")] 
     public bool IsFixedTimestep = true;
     [FoldoutGroup("General")] [ConditionalField(nameof(IsFixedTimestep)), Range(0.01f, 0.02f)] 
-    public float FixedTimestepRate = 0.01f;     
+    public float FixedTimestepRate = 0.01f;
+    [HideInInspector] public double spawnTime;      
     
     //Outline 
     [FoldoutGroup("Outline")] 

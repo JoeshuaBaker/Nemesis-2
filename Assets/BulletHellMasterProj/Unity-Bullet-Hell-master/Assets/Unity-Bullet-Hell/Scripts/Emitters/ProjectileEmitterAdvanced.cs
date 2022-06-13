@@ -40,50 +40,49 @@ namespace BulletHell
             }
 
             bool mirror = false;
-            if (Groups == null || LastGroupCountPoll != props.GroupCount || PreviousMirrorPairRotation != props.MirrorPairRotation || PreviousPairGroupDirection != props.PairGroupDirection)
-            {               
-                // Refresh the groups, they were changed
-                float rotation = 0;
-                for (int n = 0; n < Groups.Length; n++)
-                {
-                    if (n < props.GroupCount && Groups[n] == null)
-                    {
-                        Groups[n] = new EmitterGroup(Rotate(props.Direction, rotation).normalized, props.SpokeCount, props.SpokeSpacing, mirror);
-                    }
-                    else if (n < props.GroupCount)
-                    {
-                        Groups[n].Set(Rotate(props.Direction, rotation).normalized, props.SpokeCount, props.SpokeSpacing, mirror);
-                    }
-                    else
-                    {
-                        //n is greater than GroupCount -- ensure we clear the rest of the buffer
-                        Groups[n] = null;
-                    }
-
-                    // invert the mirror flag if needed
-                    if (props.MirrorPairRotation)
-                        mirror = !mirror;
-
-                    // sets the starting direction of all the groups so we divide by 360 to evenly distribute their direction
-                    // Could reduce the scope of the directions here
-                    rotation = CalculateGroupRotation(n, rotation);
-                }
-                LastGroupCountPoll = props.GroupCount;
-                PreviousMirrorPairRotation = props.MirrorPairRotation;
-                PreviousPairGroupDirection = props.PairGroupDirection;
-            }
-            else if (props.RotationSpeed == 0)
+            Groups = new EmitterGroup[10]; 
+            // Refresh the groups, they were changed
+            float rotation = 0;
+            for (int n = 0; n < Groups.Length; n++)
             {
-                float rotation = 0;
+                if (n < props.GroupCount && Groups[n] == null)
+                {
+                    Groups[n] = new EmitterGroup(Rotate(props.Direction, rotation).normalized, props.SpokeCount, props.SpokeSpacing, mirror);
+                }
+                else if (n < props.GroupCount)
+                {
+                    Groups[n].Set(Rotate(props.Direction, rotation).normalized, props.SpokeCount, props.SpokeSpacing, mirror);
+                }
+                else
+                {
+                    //n is greater than GroupCount -- ensure we clear the rest of the buffer
+                    Groups[n] = null;
+                }
+
+                // invert the mirror flag if needed
+                if (props.MirrorPairRotation)
+                    mirror = !mirror;
+
+                // sets the starting direction of all the groups so we divide by 360 to evenly distribute their direction
+                // Could reduce the scope of the directions here
+                rotation = CalculateGroupRotation(n, rotation);
+            }
+            LastGroupCountPoll = props.GroupCount;
+            PreviousMirrorPairRotation = props.MirrorPairRotation;
+            PreviousPairGroupDirection = props.PairGroupDirection;
+
+            if (props.RotationSpeed == 0)
+            {
+                float rot = 0;
                 // If rotation speed is locked, then allow to update Direction of groups
                 for (int n = 0; n < Groups.Length; n++)
                 {
                     if (Groups[n] != null)
                     {
-                        Groups[n].Direction = Rotate(props.Direction, rotation).normalized;
+                        Groups[n].Direction = Rotate(props.Direction, rot).normalized;
                     }
 
-                    rotation = CalculateGroupRotation(n, rotation);
+                    rot = CalculateGroupRotation(n, rot);
                 }
             }
         }

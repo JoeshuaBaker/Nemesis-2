@@ -8,6 +8,7 @@ namespace BulletHell
         public Vector2 Velocity;
         public float Acceleration;
         public Vector2 Gravity;
+        public Vector2 InitialPosition;
         public Vector2 Position;
         public float Rotation;
         public Color Color;

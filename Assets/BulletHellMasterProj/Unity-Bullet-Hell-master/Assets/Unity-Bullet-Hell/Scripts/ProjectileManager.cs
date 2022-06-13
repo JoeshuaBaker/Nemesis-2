@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor;
 
 namespace BulletHell
 {
-    public class ProjectileManager : MonoBehaviour
+    [ExecuteAlways]
+    public class ProjectileManager : Sirenix.OdinInspector.SerializedMonoBehaviour
     {
         private bool Initialized = false;
 
@@ -12,14 +14,14 @@ namespace BulletHell
         private List<ProjectilePrefab> ProjectilePrefabs;
 
         // Each projectile type has its own material, therefore, own IndirectRenderer
-        private Dictionary<int, IndirectRenderer> IndirectRenderers;
+        public Dictionary<int, IndirectRenderer> IndirectRenderers;
 
         // Cache the last accessed IndirectRenderer to reduce the Dict lookup for batches
         private int LastAccessedProjectileTypeIndex = -1;
         private IndirectRenderer LastAccessedRenderer;
 
         // Counters to keep track of Projectile Group information
-        private Dictionary<int, ProjectileTypeCounters> ProjectileTypeCounters;
+        public Dictionary<int, ProjectileTypeCounters> ProjectileTypeCounters;
 
         [SerializeField]
         private ProjectileEmitterBase[] EmittersArray;
@@ -40,15 +42,18 @@ namespace BulletHell
                         GameObject go = new GameObject();
                         go.name = "ProjectileManager";
                         instance = go.AddComponent<ProjectileManager>();
+#if !UNITY_EDITOR
                         DontDestroyOnLoad(go);
+#endif
                     }
                 }
                 return instance;
             }
         }
 
-        void Awake()
+        public void Awake()
         {
+            Instance.Initialized = false;
             Instance.Initialize();
         }
 
@@ -56,18 +61,30 @@ namespace BulletHell
         static void EnableInstance()
         {
             Instance.Initialized = false;
+            Instance.Initialize();
         }
 
-        void Initialize()
+        public void Initialize()
         {
-            if (!Initialized)
+            if (!Initialized || !Application.isPlaying)
             {
                 // Grab a list of Projectile Types founds in assets folder "ProjectilePrefabs"
                 GameObject[] projectileTypes = Resources.LoadAll<GameObject>("ProjectilePrefabs");
                 ProjectilePrefabs = new List<ProjectilePrefab>();
+
+                if(IndirectRenderers != null)
+                {
+                    foreach (KeyValuePair<int, IndirectRenderer> kvp in IndirectRenderers)
+                    {
+                        kvp.Value.ReleaseBuffers(true);
+                    }
+                }
+
                 IndirectRenderers = new Dictionary<int, IndirectRenderer>();
                 ProjectileTypeCounters = new Dictionary<int, ProjectileTypeCounters>();
-                                             
+                LastAccessedProjectileTypeIndex = -1;
+                LastAccessedRenderer = null;
+
                 // Process projectile types
                 int currentIndex = 0;
                 for (int n = 0; n < projectileTypes.Length; n++)
@@ -94,9 +111,11 @@ namespace BulletHell
                 RegisterEmitters();
 
                 Initialized = true;
+                Debug.Log("ProjectileManager initialized.");
             }
         }
 
+        
         // Adds a new emitter at runtime
         public void AddEmitter(ProjectileEmitterBase emitter, int allocation)
         {
@@ -115,8 +134,10 @@ namespace BulletHell
 
         // Only should be used in DEBUG mode when adding Emitters during runtime
         // This rebuilds the entire Emitters array -- If adding emitters at runtime you should use the AddEmitter method.
-        private void RefreshEmitters()
+        public void RefreshEmitters()
         {
+            Initialize();
+
             ProjectileEmitterBase[] emittersTemp = GameObject.FindObjectsOfType<ProjectileEmitterBase>();
 
             if (emittersTemp.Length != EmitterCount)
@@ -147,7 +168,6 @@ namespace BulletHell
         {
             // Register Emitters that are currently in the scene
             ProjectileEmitterBase[] emittersTemp = GameObject.FindObjectsOfType<ProjectileEmitterBase>();
-
 
             for (int n = 0; n < emittersTemp.Length; n++)
             {
@@ -226,7 +246,6 @@ namespace BulletHell
 
                 EmitterCount++;
             }
-
         }
 
         public ProjectilePrefab GetProjectilePrefab(int index)
@@ -236,7 +255,7 @@ namespace BulletHell
 
         public void UpdateBufferData(ProjectilePrefab projectileType, ProjectileData data)
         {
-            if (projectileType.Index != LastAccessedProjectileTypeIndex)
+            if (projectileType.Index != LastAccessedProjectileTypeIndex || LastAccessedRenderer == null)
             {
                 LastAccessedProjectileTypeIndex = projectileType.Index;
                 LastAccessedRenderer = IndirectRenderers[LastAccessedProjectileTypeIndex];
@@ -261,20 +280,24 @@ namespace BulletHell
             // Provides a simple way to update active Emitters if removing/adding them at runtime for debugging purposes
             // You should be using AddEmitter() if you want to add Emitters at runtime (See above comment).
 #if UNITY_EDITOR
-            RefreshEmitters();
+            //RefreshEmitters();
 #endif
 
-            DrawEmitters();
-            UpdateEmitters();               
+            DrawEmitters();        
+            UpdateEmitters();
         }
           
         public void UpdateEmitters()
         {
+            if (ProjectileTypeCounters == null || ProjectilePrefabs == null)
+                return;
+
             //reset
             for (int n = 0; n < ProjectilePrefabs.Count; n++)
             {
-                ProjectileTypeCounters[n].ActiveProjectiles = 0;
-                ProjectilePrefabs[n].ResetBufferIndex();
+                if(ProjectileTypeCounters[n] != null) 
+                    ProjectileTypeCounters[n].ActiveProjectiles = 0;
+                ProjectilePrefabs[n]?.ResetBufferIndex();
             }
 
             for (int n = 0; n < EmittersArray.Length; n++)
@@ -285,7 +308,7 @@ namespace BulletHell
                     {
                         EmittersArray[n].UpdateEmitter(Time.deltaTime);
 
-                        // Update projectile counters
+                        // Update projectile counter
                         ProjectileTypeCounters[EmittersArray[n].props.ProjectilePrefab.Index].ActiveProjectiles += EmittersArray[n].ActiveProjectileCount;
 
                         // update outlines
@@ -303,28 +326,47 @@ namespace BulletHell
 
         public void DrawEmitters()
         {
+            if (ProjectileTypeCounters == null || ProjectilePrefabs == null)
+            {
+                Debug.Log($"Could not draw emitters, as ProjectileTypeCounters is null ({ProjectileTypeCounters}), " +
+                    $"or ProjectilePrefabs is null ({ProjectilePrefabs})");
+                return;
+            }
+
             // We draw all emitters at the same time based on their Projectile Type.  1 draw call per projectile type.
             for (int n = 0; n < ProjectilePrefabs.Count; n++)
             {
-                if (ProjectileTypeCounters[ProjectilePrefabs[n].Index].ActiveProjectiles > 0)
+                if (ProjectilePrefabs[n] != null && ProjectileTypeCounters[ProjectilePrefabs[n].Index].ActiveProjectiles > 0)
                 {
-                    IndirectRenderers[ProjectilePrefabs[n].Index].Draw(ProjectileTypeCounters[ProjectilePrefabs[n].Index].ActiveProjectiles);
+                    if(IndirectRenderers[ProjectilePrefabs[n].Index] != null)
+                    {
+                        IndirectRenderers[ProjectilePrefabs[n].Index].Draw(ProjectileTypeCounters[ProjectilePrefabs[n].Index].ActiveProjectiles);
+                    }
                 }
             }
         }
 
         void OnGUI()
         {
+            if (ProjectileTypeCounters == null)
+            {
+                Debug.Log("onGUI was called but ProjectileTypeCounters is null");
+                return;
+            }
+               
             int total = 0;
             for (int n = 0; n < ProjectileTypeCounters.Count; n++)
             {
-                total += ProjectileTypeCounters[n].ActiveProjectiles;
+                total += (ProjectileTypeCounters[n] != null) ? ProjectileTypeCounters[n].ActiveProjectiles : 0;
             }
             GUI.Label(new Rect(5, 5, 300, 20), "Projectiles: " + total.ToString());
         }
 
         void OnApplicationQuit()
         {
+            if(IndirectRenderers == null)
+                return;
+
             foreach (KeyValuePair<int, IndirectRenderer> kvp in IndirectRenderers)
             {
                 kvp.Value.ReleaseBuffers(true);
@@ -333,6 +375,9 @@ namespace BulletHell
 
         void OnDisable()
         {
+            if(IndirectRenderers == null)
+                return;
+            
             foreach (KeyValuePair<int, IndirectRenderer> kvp in IndirectRenderers)
             {
                 kvp.Value.ReleaseBuffers(true);
