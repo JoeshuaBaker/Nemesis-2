@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3453500415576585352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.021853574, y: 0.3326162, z: 0}
+  m_LocalPosition: {x: 0.046859607, y: 0.33002314, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,7 +52,7 @@ MonoBehaviour:
     TimeToLive: 5
     CoolOffTime: 0.1
     AutoFire: 0
-    Direction: {x: 0.06556072, y: 0.99784863}
+    Direction: {x: 0.14057882, y: 0.99006945}
     Speed: 1
     MaxSpeed: 100
     RotationSpeed: 0
