@@ -1,0 +1,6288 @@
+fileFormatVersion: 2
+guid: 280df325d928e004abd0aed7fe6a9ce3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6459154979995627845
+    second: EnemyGlobeHalf_0
+  - first:
+      213: -4216411139855920415
+    second: EnemyGlobeHalf_1
+  - first:
+      213: -84606568226343731
+    second: EnemyGlobeHalf_2
+  - first:
+      213: 6362036671749866105
+    second: EnemyGlobeHalf_3
+  - first:
+      213: -8058730302900444
+    second: EnemyGlobeHalf_4
+  - first:
+      213: 7685874941066171375
+    second: EnemyGlobeHalf_5
+  - first:
+      213: -1700284184418398681
+    second: EnemyGlobeHalf_6
+  - first:
+      213: 5051308860695162636
+    second: EnemyGlobeHalf_7
+  - first:
+      213: 7774806752874321556
+    second: EnemyGlobeHalf_8
+  - first:
+      213: 4083484384512932558
+    second: EnemyGlobeHalf_9
+  - first:
+      213: 1411661715876257588
+    second: EnemyGlobeHalf_10
+  - first:
+      213: 6341871073417366099
+    second: EnemyGlobeHalf_11
+  - first:
+      213: -8270790993595520907
+    second: EnemyGlobeHalf_12
+  - first:
+      213: 3887930023551956275
+    second: EnemyGlobeHalf_13
+  - first:
+      213: -8026423650588556803
+    second: EnemyGlobeHalf_14
+  - first:
+      213: -6970977365534409462
+    second: EnemyGlobeHalf_15
+  - first:
+      213: -4319375309259828189
+    second: EnemyGlobeHalf_16
+  - first:
+      213: -6013130003173018888
+    second: EnemyGlobeHalf_17
+  - first:
+      213: 708284904664438860
+    second: EnemyGlobeHalf_18
+  - first:
+      213: 4057011521009129708
+    second: EnemyGlobeHalf_19
+  - first:
+      213: -6599110216660141457
+    second: EnemyGlobeHalf_20
+  - first:
+      213: 8752663315452213129
+    second: EnemyGlobeHalf_21
+  - first:
+      213: 8293920593043182455
+    second: EnemyGlobeHalf_22
+  - first:
+      213: 4850562016346260075
+    second: EnemyGlobeHalf_23
+  - first:
+      213: -8546684683336265274
+    second: EnemyGlobeHalf_24
+  - first:
+      213: -2289115255576516174
+    second: EnemyGlobeHalf_25
+  - first:
+      213: 6439328622134452800
+    second: EnemyGlobeHalf_26
+  - first:
+      213: 7712460339887959852
+    second: EnemyGlobeHalf_27
+  - first:
+      213: 8159802487122293562
+    second: EnemyGlobeHalf_28
+  - first:
+      213: 5957418178227614904
+    second: EnemyGlobeHalf_29
+  - first:
+      213: -3638789638261910645
+    second: EnemyGlobeHalf_30
+  - first:
+      213: 7286167042372813984
+    second: EnemyGlobeHalf_31
+  - first:
+      213: 644015861089699704
+    second: EnemyGlobeHalf_32
+  - first:
+      213: -5887638820660447093
+    second: EnemyGlobeHalf_33
+  - first:
+      213: 6963179480324357704
+    second: EnemyGlobeHalf_34
+  - first:
+      213: 8161343802440818036
+    second: EnemyGlobeHalf_35
+  - first:
+      213: 6524596820199013824
+    second: EnemyGlobeHalf_36
+  - first:
+      213: 3766359821368805280
+    second: EnemyGlobeHalf_37
+  - first:
+      213: -5753753252180554506
+    second: EnemyGlobeHalf_38
+  - first:
+      213: 115020258996544364
+    second: EnemyGlobeHalf_39
+  - first:
+      213: 183147816960834121
+    second: EnemyGlobeHalf_40
+  - first:
+      213: 8187453657735013093
+    second: EnemyGlobeHalf_41
+  - first:
+      213: -4167157694356376216
+    second: EnemyGlobeHalf_42
+  - first:
+      213: -3946048762731993157
+    second: EnemyGlobeHalf_43
+  - first:
+      213: 4549797460069075925
+    second: EnemyGlobeHalf_44
+  - first:
+      213: 3509053725891861589
+    second: EnemyGlobeHalf_45
+  - first:
+      213: 2407316073846519579
+    second: EnemyGlobeHalf_46
+  - first:
+      213: 713512011355145898
+    second: EnemyGlobeHalf_47
+  - first:
+      213: 4995826503395783924
+    second: EnemyGlobeHalf_48
+  - first:
+      213: -7439279657519795588
+    second: EnemyGlobeHalf_49
+  - first:
+      213: 1681091909966442613
+    second: EnemyGlobeHalf_50
+  - first:
+      213: -750843895705771367
+    second: EnemyGlobeHalf_51
+  - first:
+      213: -4899947722031818717
+    second: EnemyGlobeHalf_52
+  - first:
+      213: -3232732266571380586
+    second: EnemyGlobeHalf_53
+  - first:
+      213: -6688328865712344348
+    second: EnemyGlobeHalf_54
+  - first:
+      213: -5058097408749043139
+    second: EnemyGlobeHalf_55
+  - first:
+      213: -8737715438204470779
+    second: EnemyGlobeHalf_56
+  - first:
+      213: 6811059088769692781
+    second: EnemyGlobeHalf_57
+  - first:
+      213: 8274152654940482603
+    second: EnemyGlobeHalf_58
+  - first:
+      213: -133561578764190290
+    second: EnemyGlobeHalf_59
+  - first:
+      213: 3874080911643792818
+    second: EnemyGlobeHalf_60
+  - first:
+      213: 3397202519444453026
+    second: EnemyGlobeHalf_61
+  - first:
+      213: -4817398885314173348
+    second: EnemyGlobeHalf_62
+  - first:
+      213: 6028518650596548769
+    second: EnemyGlobeHalf_63
+  - first:
+      213: 5449726622871997393
+    second: EnemyGlobeHalf_64
+  - first:
+      213: 2302772481622259939
+    second: EnemyGlobeHalf_65
+  - first:
+      213: -4193110262871592924
+    second: EnemyGlobeHalf_66
+  - first:
+      213: -6612808318156664082
+    second: EnemyGlobeHalf_67
+  - first:
+      213: -2306044683433578755
+    second: EnemyGlobeHalf_68
+  - first:
+      213: -9070464274359477024
+    second: EnemyGlobeHalf_69
+  - first:
+      213: -7268170842622125359
+    second: EnemyGlobeHalf_70
+  - first:
+      213: -8518982640899235631
+    second: EnemyGlobeHalf_71
+  - first:
+      213: 2578820053120180770
+    second: EnemyGlobeHalf_72
+  - first:
+      213: 1836396691271763817
+    second: EnemyGlobeHalf_73
+  - first:
+      213: -8273369868812921778
+    second: EnemyGlobeHalf_74
+  - first:
+      213: -3561571935177910607
+    second: EnemyGlobeHalf_75
+  - first:
+      213: -8489622226872864786
+    second: EnemyGlobeHalf_76
+  - first:
+      213: -8794012265038884258
+    second: EnemyGlobeHalf_77
+  - first:
+      213: 8015254492624569416
+    second: EnemyGlobeHalf_78
+  - first:
+      213: 6408405529807678305
+    second: EnemyGlobeHalf_79
+  - first:
+      213: -1470716178875038310
+    second: EnemyGlobeHalf_80
+  - first:
+      213: 6943324470182165837
+    second: EnemyGlobeHalf_81
+  - first:
+      213: -6084080494008142116
+    second: EnemyGlobeHalf_82
+  - first:
+      213: 4123138571104700913
+    second: EnemyGlobeHalf_83
+  - first:
+      213: -2038362510918468938
+    second: EnemyGlobeHalf_84
+  - first:
+      213: -4317193399304731915
+    second: EnemyGlobeHalf_85
+  - first:
+      213: 3975555130830077528
+    second: EnemyGlobeHalf_86
+  - first:
+      213: 3418350118708307707
+    second: EnemyGlobeHalf_87
+  - first:
+      213: 7367358639149641897
+    second: EnemyGlobeHalf_88
+  - first:
+      213: -6613136315296258594
+    second: EnemyGlobeHalf_89
+  - first:
+      213: -427561320541716585
+    second: EnemyGlobeHalf_90
+  - first:
+      213: -8611364359507846184
+    second: EnemyGlobeHalf_91
+  - first:
+      213: -5034035274391994312
+    second: EnemyGlobeHalf_92
+  - first:
+      213: -5329598144673857670
+    second: EnemyGlobeHalf_93
+  - first:
+      213: -7767798881413766375
+    second: EnemyGlobeHalf_94
+  - first:
+      213: 5065179835050272827
+    second: EnemyGlobeHalf_95
+  - first:
+      213: 7706537548283568612
+    second: EnemyGlobeHalf_96
+  - first:
+      213: -542741113210348020
+    second: EnemyGlobeHalf_97
+  - first:
+      213: 1525443116115016693
+    second: EnemyGlobeHalf_98
+  - first:
+      213: 5832687934132545900
+    second: EnemyGlobeHalf_99
+  - first:
+      213: 8906089706256565011
+    second: EnemyGlobeHalf_100
+  - first:
+      213: 3919002588699495914
+    second: EnemyGlobeHalf_101
+  - first:
+      213: -4739107641092159601
+    second: EnemyGlobeHalf_102
+  - first:
+      213: -4371893546241029183
+    second: EnemyGlobeHalf_103
+  - first:
+      213: 1080208658609341628
+    second: EnemyGlobeHalf_104
+  - first:
+      213: 246687749299001615
+    second: EnemyGlobeHalf_105
+  - first:
+      213: -8284741627912033859
+    second: EnemyGlobeHalf_106
+  - first:
+      213: 1843876259760369515
+    second: EnemyGlobeHalf_107
+  - first:
+      213: -7883798507253040300
+    second: EnemyGlobeHalf_108
+  - first:
+      213: 8703702779422195397
+    second: EnemyGlobeHalf_109
+  - first:
+      213: 7797837128701577987
+    second: EnemyGlobeHalf_110
+  - first:
+      213: -1557174192187783504
+    second: EnemyGlobeHalf_111
+  - first:
+      213: -4768935784092214981
+    second: EnemyGlobeHalf_112
+  - first:
+      213: -883181143458370352
+    second: EnemyGlobeHalf_113
+  - first:
+      213: 336062675379144069
+    second: EnemyGlobeHalf_114
+  - first:
+      213: 8347408772670006701
+    second: EnemyGlobeHalf_115
+  - first:
+      213: -2366772402884559909
+    second: EnemyGlobeHalf_116
+  - first:
+      213: -3089236991847139833
+    second: EnemyGlobeHalf_117
+  - first:
+      213: -6158742409245191493
+    second: EnemyGlobeHalf_118
+  - first:
+      213: 5654385781749160907
+    second: EnemyGlobeHalf_119
+  - first:
+      213: 8107717183114143456
+    second: EnemyGlobeHalf_120
+  - first:
+      213: 1183626450291759633
+    second: EnemyGlobeHalf_121
+  - first:
+      213: -81868807413983964
+    second: EnemyGlobeHalf_122
+  - first:
+      213: -1236927551165623232
+    second: EnemyGlobeHalf_123
+  - first:
+      213: -2296910970699103488
+    second: EnemyGlobeHalf_124
+  - first:
+      213: 5030145838114617773
+    second: EnemyGlobeHalf_125
+  - first:
+      213: -6976331882511074038
+    second: EnemyGlobeHalf_126
+  - first:
+      213: -4356806940515997612
+    second: EnemyGlobeHalf_127
+  - first:
+      213: 4588106006582503670
+    second: EnemyGlobeHalf_128
+  - first:
+      213: 4772628450451763989
+    second: EnemyGlobeHalf_129
+  - first:
+      213: 8299692374746209122
+    second: EnemyGlobeHalf_130
+  - first:
+      213: -2083574632269035621
+    second: EnemyGlobeHalf_131
+  - first:
+      213: -8121379031746127871
+    second: EnemyGlobeHalf_132
+  - first:
+      213: -3930457047036247137
+    second: EnemyGlobeHalf_133
+  - first:
+      213: -9198158879162928621
+    second: EnemyGlobeHalf_134
+  - first:
+      213: 2798943892469283222
+    second: EnemyGlobeHalf_135
+  - first:
+      213: -3646096945322414111
+    second: EnemyGlobeHalf_136
+  - first:
+      213: -5470194617860140825
+    second: EnemyGlobeHalf_137
+  - first:
+      213: -805705799569276005
+    second: EnemyGlobeHalf_138
+  - first:
+      213: 3417815117975423372
+    second: EnemyGlobeHalf_139
+  - first:
+      213: 7377174804190147270
+    second: EnemyGlobeHalf_140
+  - first:
+      213: 3632205567819714929
+    second: EnemyGlobeHalf_141
+  - first:
+      213: 6346418509971224238
+    second: EnemyGlobeHalf_142
+  - first:
+      213: 6275729803024775802
+    second: EnemyGlobeHalf_143
+  - first:
+      213: -8385625528042153682
+    second: EnemyGlobeHalf_144
+  - first:
+      213: -5287627937091232226
+    second: EnemyGlobeHalf_145
+  - first:
+      213: -2785214920611703556
+    second: EnemyGlobeHalf_146
+  - first:
+      213: 2311841214494737712
+    second: EnemyGlobeHalf_147
+  - first:
+      213: -5177637856396272990
+    second: EnemyGlobeHalf_148
+  - first:
+      213: -6357958166228681648
+    second: EnemyGlobeHalf_149
+  - first:
+      213: 7712809976065559274
+    second: EnemyGlobeHalf_150
+  - first:
+      213: 4811667196345014408
+    second: EnemyGlobeHalf_151
+  - first:
+      213: -5410709249600104527
+    second: EnemyGlobeHalf_152
+  - first:
+      213: 1749227427191357230
+    second: EnemyGlobeHalf_153
+  - first:
+      213: -8765160960588117857
+    second: EnemyGlobeHalf_154
+  - first:
+      213: -3745856292323696029
+    second: EnemyGlobeHalf_155
+  - first:
+      213: 981061105553428184
+    second: EnemyGlobeHalf_156
+  - first:
+      213: -3193580392954142802
+    second: EnemyGlobeHalf_157
+  - first:
+      213: -7261578907328058826
+    second: EnemyGlobeHalf_158
+  - first:
+      213: 8905683949523232456
+    second: EnemyGlobeHalf_159
+  - first:
+      213: 8011237237937849121
+    second: EnemyGlobeHalf_160
+  - first:
+      213: -5212477554748874910
+    second: EnemyGlobeHalf_161
+  - first:
+      213: 6873518577285868185
+    second: EnemyGlobeHalf_162
+  - first:
+      213: -5007604492795241075
+    second: EnemyGlobeHalf_163
+  - first:
+      213: -2347499313159484148
+    second: EnemyGlobeHalf_164
+  - first:
+      213: -8598542799139431284
+    second: EnemyGlobeHalf_165
+  - first:
+      213: 2334946123169982067
+    second: EnemyGlobeHalf_166
+  - first:
+      213: -5897740634343388277
+    second: EnemyGlobeHalf_167
+  - first:
+      213: -6481090794895075534
+    second: EnemyGlobeHalf_168
+  - first:
+      213: -3461496168458762047
+    second: EnemyGlobeHalf_169
+  - first:
+      213: 3452975805173340793
+    second: EnemyGlobeHalf_170
+  - first:
+      213: -7401819250509476495
+    second: EnemyGlobeHalf_171
+  - first:
+      213: 2877965794919142566
+    second: EnemyGlobeHalf_172
+  - first:
+      213: -7348183660348262714
+    second: EnemyGlobeHalf_173
+  - first:
+      213: -4532535686349848863
+    second: EnemyGlobeHalf_174
+  - first:
+      213: -3402801459920573391
+    second: EnemyGlobeHalf_175
+  - first:
+      213: 9056214845224323836
+    second: EnemyGlobeHalf_176
+  - first:
+      213: -2525863287284604068
+    second: EnemyGlobeHalf_177
+  - first:
+      213: 9133652026284508650
+    second: EnemyGlobeHalf_178
+  - first:
+      213: -8080227689800073191
+    second: EnemyGlobeHalf_179
+  - first:
+      213: -1352302351715574595
+    second: EnemyGlobeHalf_180
+  - first:
+      213: 8833608927001338058
+    second: EnemyGlobeHalf_181
+  - first:
+      213: 300191018008345935
+    second: EnemyGlobeHalf_182
+  - first:
+      213: 210587736846630830
+    second: EnemyGlobeHalf_183
+  - first:
+      213: -5704614488716450699
+    second: EnemyGlobeHalf_184
+  - first:
+      213: 8481803982588208444
+    second: EnemyGlobeHalf_185
+  - first:
+      213: -2003403782979316297
+    second: EnemyGlobeHalf_186
+  - first:
+      213: 5145908005126871665
+    second: EnemyGlobeHalf_187
+  - first:
+      213: -4047670408821788671
+    second: EnemyGlobeHalf_188
+  - first:
+      213: 4764348306227946341
+    second: EnemyGlobeHalf_189
+  - first:
+      213: -7921678401187458889
+    second: EnemyGlobeHalf_190
+  - first:
+      213: 3734610225384825796
+    second: EnemyGlobeHalf_191
+  - first:
+      213: -7477853954571644785
+    second: EnemyGlobeHalf_192
+  - first:
+      213: -5000391302847450153
+    second: EnemyGlobeHalf_193
+  - first:
+      213: -7723297318269938996
+    second: EnemyGlobeHalf_194
+  - first:
+      213: 9071039598928039439
+    second: EnemyGlobeHalf_195
+  - first:
+      213: 3647967342504861378
+    second: EnemyGlobeHalf_196
+  - first:
+      213: 1351064268649780104
+    second: EnemyGlobeHalf_197
+  - first:
+      213: -2635430353779269403
+    second: EnemyGlobeHalf_198
+  - first:
+      213: -6332562387103966824
+    second: EnemyGlobeHalf_199
+  - first:
+      213: 5179538456940459543
+    second: EnemyGlobeHalf_200
+  - first:
+      213: 3940651015719979873
+    second: EnemyGlobeHalf_201
+  - first:
+      213: -659582243739367554
+    second: EnemyGlobeHalf_202
+  - first:
+      213: -1727229787032217197
+    second: EnemyGlobeHalf_203
+  - first:
+      213: 1161730554003588575
+    second: EnemyGlobeHalf_204
+  - first:
+      213: 4270677469723532776
+    second: EnemyGlobeHalf_205
+  - first:
+      213: -8996130644040068242
+    second: EnemyGlobeHalf_206
+  - first:
+      213: 8230460182785141903
+    second: EnemyGlobeHalf_207
+  - first:
+      213: 1358174861924716320
+    second: EnemyGlobeHalf_208
+  - first:
+      213: 1583084529944810445
+    second: EnemyGlobeHalf_209
+  - first:
+      213: -2288164846088113315
+    second: EnemyGlobeHalf_210
+  - first:
+      213: 2599695928927436836
+    second: EnemyGlobeHalf_211
+  - first:
+      213: -3500227269472105591
+    second: EnemyGlobeHalf_212
+  - first:
+      213: 8180720915053557386
+    second: EnemyGlobeHalf_213
+  - first:
+      213: 7130080692032385093
+    second: EnemyGlobeHalf_214
+  - first:
+      213: -2320569199454320023
+    second: EnemyGlobeHalf_215
+  - first:
+      213: 9090573327123174137
+    second: EnemyGlobeHalf_216
+  - first:
+      213: 3636466470633867570
+    second: EnemyGlobeHalf_217
+  - first:
+      213: -5342945292228207396
+    second: EnemyGlobeHalf_218
+  - first:
+      213: 5967812393537260633
+    second: EnemyGlobeHalf_219
+  - first:
+      213: -3081520120715658188
+    second: EnemyGlobeHalf_220
+  - first:
+      213: 8596833206502624755
+    second: EnemyGlobeHalf_221
+  - first:
+      213: -8157053461693805711
+    second: EnemyGlobeHalf_222
+  - first:
+      213: 902731150352676459
+    second: EnemyGlobeHalf_223
+  - first:
+      213: 528917766823362416
+    second: EnemyGlobeHalf_224
+  - first:
+      213: -8469654259634835356
+    second: EnemyGlobeHalf_225
+  - first:
+      213: 6702095442736728244
+    second: EnemyGlobeHalf_226
+  - first:
+      213: 3503063642697031864
+    second: EnemyGlobeHalf_227
+  - first:
+      213: 6947601483440617476
+    second: EnemyGlobeHalf_228
+  - first:
+      213: -4563998024703063508
+    second: EnemyGlobeHalf_229
+  - first:
+      213: -2580568054546828057
+    second: EnemyGlobeHalf_230
+  - first:
+      213: 3707715162257294561
+    second: EnemyGlobeHalf_231
+  - first:
+      213: 2838420795378009918
+    second: EnemyGlobeHalf_232
+  - first:
+      213: -7782095976405577749
+    second: EnemyGlobeHalf_233
+  - first:
+      213: 3392496001978182103
+    second: EnemyGlobeHalf_234
+  - first:
+      213: 4656382337957782396
+    second: EnemyGlobeHalf_235
+  - first:
+      213: -503714203296024038
+    second: EnemyGlobeHalf_236
+  - first:
+      213: 7009257648418576969
+    second: EnemyGlobeHalf_237
+  - first:
+      213: 8719043048199407157
+    second: EnemyGlobeHalf_238
+  - first:
+      213: -295439388264432882
+    second: EnemyGlobeHalf_239
+  - first:
+      213: 3141204720506074900
+    second: EnemyGlobeHalf_240
+  - first:
+      213: 6922526684970887551
+    second: EnemyGlobeHalf_241
+  - first:
+      213: 1868125658003018789
+    second: EnemyGlobeHalf_242
+  - first:
+      213: 2602430918922732969
+    second: EnemyGlobeHalf_243
+  - first:
+      213: -5370575247382480746
+    second: EnemyGlobeHalf_244
+  - first:
+      213: 5951076983198724783
+    second: EnemyGlobeHalf_245
+  - first:
+      213: 3316201106903430581
+    second: EnemyGlobeHalf_246
+  - first:
+      213: 2021434329779860204
+    second: EnemyGlobeHalf_247
+  - first:
+      213: 4337029217199968542
+    second: EnemyGlobeHalf_248
+  - first:
+      213: 8841339034611550923
+    second: EnemyGlobeHalf_249
+  - first:
+      213: 751723718827885839
+    second: EnemyGlobeHalf_250
+  - first:
+      213: 4090403604226643632
+    second: EnemyGlobeHalf_251
+  - first:
+      213: -3740672083118264297
+    second: EnemyGlobeHalf_252
+  - first:
+      213: 233230768107175471
+    second: EnemyGlobeHalf_253
+  - first:
+      213: -2313281668859942930
+    second: EnemyGlobeHalf_254
+  - first:
+      213: -4708496747179929903
+    second: EnemyGlobeHalf_255
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe4a2c84c87c56a0800000000000000
+      internalID: -6459154979995627845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e253e5686c4c75c0800000000000000
+      internalID: -4216411139855920415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4343346ca63def0800000000000000
+      internalID: -84606568226343731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972c8ab35ae7a4850800000000000000
+      internalID: 6362036671749866105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42774f2a0ae53eff0800000000000000
+      internalID: -8058730302900444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe353529986b9aa60800000000000000
+      internalID: 7685874941066171375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_6
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ec682fa806768e0800000000000000
+      internalID: -1700284184418398681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_7
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fa48455aad91640800000000000000
+      internalID: 5051308860695162636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_8
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496d16e8c89a5eb60800000000000000
+      internalID: 7774806752874321556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_9
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca7fb899637ba830800000000000000
+      internalID: 4083484384512932558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f92dde9da379310800000000000000
+      internalID: 1411661715876257588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_11
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a0e5ef32ad20850800000000000000
+      internalID: 6341871073417366099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_12
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5782d3f696f383d80800000000000000
+      internalID: -8270790993595520907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_13
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335f36dd1c3b4f530800000000000000
+      internalID: 3887930023551956275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df100e1373a6c9090800000000000000
+      internalID: -8026423650588556803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_15
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 315
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d7806150d124f90800000000000000
+      internalID: -6970977365534409462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32499ff8a0f7e04c0800000000000000
+      internalID: -4319375309259828189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_17
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2f0acfe121d8ca0800000000000000
+      internalID: -6013130003173018888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_18
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c489b4e3e5554d900800000000000000
+      internalID: 708284904664438860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_19
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce89a6fbb766d4830800000000000000
+      internalID: 4057011521009129708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_20
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a3256b8304b64a0800000000000000
+      internalID: -6599110216660141457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_21
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9873f1c69e4b77970800000000000000
+      internalID: 8752663315452213129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_22
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773d2a716dce91370800000000000000
+      internalID: 8293920593043182455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_23
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6242595478a05340800000000000000
+      internalID: 4850562016346260075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_24
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c158721093146980800000000000000
+      internalID: -8546684683336265274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_25
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b92f65adcd6b30e0800000000000000
+      internalID: -2289115255576516174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_26
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042645ac3471d5950800000000000000
+      internalID: 6439328622134452800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f6f4711d9280b60800000000000000
+      internalID: 7712460339887959852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_28
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33f54a21217d3170800000000000000
+      internalID: 8159802487122293562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_29
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b436b3f4400da250800000000000000
+      internalID: 5957418178227614904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_30
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83d6076a1c608dc0800000000000000
+      internalID: -3638789638261910645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_31
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 294
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a44ace325aad1560800000000000000
+      internalID: 7286167042372813984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87708f5730100f800800000000000000
+      internalID: 644015861089699704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_33
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88fbb8cfa7ea4ea0800000000000000
+      internalID: -5887638820660447093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_34
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84eb50848de22a060800000000000000
+      internalID: 6963179480324357704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_35
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d125a92fae24170800000000000000
+      internalID: 8161343802440818036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_36
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdfa9a3d360c8a50800000000000000
+      internalID: 6524596820199013824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_37
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7cdf07d4cc44430800000000000000
+      internalID: 3766359821368805280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_38
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc878ed6ef8620b0800000000000000
+      internalID: -5753753252180554506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_39
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63667fe052a89100800000000000000
+      internalID: 115020258996544364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_40
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ab65b18fbaa8200800000000000000
+      internalID: 183147816960834121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_41
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2a44409bdaf9170800000000000000
+      internalID: 8187453657735013093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_42
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8653ad0d7284b26c0800000000000000
+      internalID: -4167157694356376216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_43
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb76dfeae81dc39c0800000000000000
+      internalID: -3946048762731993157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_44
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db446f1fa0242f30800000000000000
+      internalID: 4549797460069075925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_45
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c9b8d95c9a2b030800000000000000
+      internalID: 3509053725891861589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_46
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17b5b3f631886120800000000000000
+      internalID: 2407316073846519579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_47
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 273
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa64ccbd467e6e900800000000000000
+      internalID: 713512011355145898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4336e5cbdb45540800000000000000
+      internalID: 4995826503395783924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_49
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c723eb4019e52c890800000000000000
+      internalID: -7439279657519795588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_50
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57035507f20745710800000000000000
+      internalID: 1681091909966442613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_51
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992efaa74777495f0800000000000000
+      internalID: -750843895705771367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_52
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3281f420283effbb0800000000000000
+      internalID: -4899947722031818717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_53
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698c11d91270323d0800000000000000
+      internalID: -3232732266571380586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_54
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2793a35584e23a0800000000000000
+      internalID: -6688328865712344348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_55
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d328038a4370ec9b0800000000000000
+      internalID: -5058097408749043139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_56
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a30657a166db680800000000000000
+      internalID: -8737715438204470779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_57
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64305a972eb58e50800000000000000
+      internalID: 6811059088769692781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_58
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c25175002b3d270800000000000000
+      internalID: 8274152654940482603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_59
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadbe16a37e752ef0800000000000000
+      internalID: -133561578764190290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_60
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b556a9301083c530800000000000000
+      internalID: 3874080911643792818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_61
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a67c8931b9452f20800000000000000
+      internalID: 3397202519444453026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_62
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c566c7bcc39252db0800000000000000
+      internalID: -4817398885314173348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_63
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 252
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0ef92b5c999a350800000000000000
+      internalID: 6028518650596548769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db46475d7151ab40800000000000000
+      internalID: 5449726622871997393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_65
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8b3a51f5715ff10800000000000000
+      internalID: 2302772481622259939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_66
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4207e759e641fc5c0800000000000000
+      internalID: -4193110262871592924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_67
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2168ceed59a34a0800000000000000
+      internalID: -6612808318156664082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_68
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe63cf04984fffd0800000000000000
+      internalID: -2306044683433578755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_69
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec9ee2cccc3f1280800000000000000
+      internalID: -9070464274359477024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_70
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da18a68025422b90800000000000000
+      internalID: -7268170842622125359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_71
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d06b717c6e76c980800000000000000
+      internalID: -8518982640899235631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_72
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222e1e5dc2fc9c320800000000000000
+      internalID: 2578820053120180770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_73
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967c4f1af013c7910800000000000000
+      internalID: 1836396691271763817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_74
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e445cf140f51f2d80800000000000000
+      internalID: -8273369868812921778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_75
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b658b9e131c29ec0800000000000000
+      internalID: -3561571935177910607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_76
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef6bf9809dce2a80800000000000000
+      internalID: -8489622226872864786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_77
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52dde7007465f580800000000000000
+      internalID: -8794012265038884258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_78
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844cd319e77eb3f60800000000000000
+      internalID: 8015254492624569416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_79
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 231
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16be5dc40ea3fe850800000000000000
+      internalID: 6408405529807678305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95cbb07d67f69be0800000000000000
+      internalID: -1470716178875038310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_81
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d3c7d71d4ab5060800000000000000
+      internalID: 6943324470182165837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_82
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6f2c98601019ba0800000000000000
+      internalID: -6084080494008142116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_83
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f948626fa4583930800000000000000
+      internalID: 4123138571104700913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_84
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba3b35981846b3e0800000000000000
+      internalID: -2038362510918468938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_85
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2c7cf0a7f3614c0800000000000000
+      internalID: -4317193399304731915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_86
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ebb1ef3520c2730800000000000000
+      internalID: 3975555130830077528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_87
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6e58f525b607f20800000000000000
+      internalID: 3418350118708307707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_88
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a07b6bf5ad1e3660800000000000000
+      internalID: 7367358639149641897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_89
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5e7832f8b6934a0800000000000000
+      internalID: -6613136315296258594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_90
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ff9698e3ff01af0800000000000000
+      internalID: -427561320541716585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_91
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db53107db94e7880800000000000000
+      internalID: -8611364359507846184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_92
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8304413e693832ab0800000000000000
+      internalID: -5034035274391994312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_93
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f322f89b67906b0800000000000000
+      internalID: -5329598144673857670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_94
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913e7aaa21c333490800000000000000
+      internalID: -7767798881413766375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_95
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38a4a739322b4640800000000000000
+      internalID: 5065179835050272827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1e6a5b11f13fa60800000000000000
+      internalID: 7706537548283568612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_97
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ed81645dbc778f0800000000000000
+      internalID: -542741113210348020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_98
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbb9159e667b2510800000000000000
+      internalID: 1525443116115016693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_99
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c696dafe5ced1f050800000000000000
+      internalID: 5832687934132545900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_100
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3138f2fb669c89b70800000000000000
+      internalID: 8906089706256565011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_101
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed05453718136630800000000000000
+      internalID: 3919002588699495914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_102
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87cc5495be4b3eb0800000000000000
+      internalID: -4739107641092159601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_103
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb0b74abf9e353c0800000000000000
+      internalID: -4371893546241029183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_104
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb406b34d0cadfe00800000000000000
+      internalID: 1080208658609341628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_105
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09586373396c6300800000000000000
+      internalID: 246687749299001615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_106
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db96964426fa60d80800000000000000
+      internalID: -8284741627912033859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_107
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6feac060b3c69910800000000000000
+      internalID: 1843876259760369515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_108
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b7d6e170f179290800000000000000
+      internalID: -7883798507253040300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_109
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce3a0e4093c9c870800000000000000
+      internalID: 8703702779422195397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_110
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b0c98cd8b773c60800000000000000
+      internalID: 7797837128701577987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_111
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 189
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6cd3d825ec36ae0800000000000000
+      internalID: -1557174192187783504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39d888db2651ddb0800000000000000
+      internalID: -4768935784092214981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_113
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc27d7ed6f4eb3f0800000000000000
+      internalID: -883181143458370352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_114
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585cd34093fe9a400800000000000000
+      internalID: 336062675379144069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_115
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5a9f16d04f7d370800000000000000
+      internalID: 8347408772670006701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_116
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb3edd0a09872fd0800000000000000
+      internalID: -2366772402884559909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_117
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70674f9c253d025d0800000000000000
+      internalID: -3089236991847139833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_118
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb29ec1c860c78aa0800000000000000
+      internalID: -6158742409245191493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_119
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb9d2809e9687e40800000000000000
+      internalID: 5654385781749160907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_120
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e669de42d5648070800000000000000
+      internalID: 8107717183114143456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_121
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a95644cf51d6010800000000000000
+      internalID: 1183626450291759633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_122
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42597efd0c42ddef0800000000000000
+      internalID: -81868807413983964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_123
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04411eb12fc85dee0800000000000000
+      internalID: -1236927551165623232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_124
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00348c644abbf10e0800000000000000
+      internalID: -2296910970699103488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_125
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da93b392dfaaec540800000000000000
+      internalID: 5030145838114617773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_126
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0df1b37d171f2f90800000000000000
+      internalID: -6976331882511074038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_127
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 168
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4586693cb238983c0800000000000000
+      internalID: -4356806940515997612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8af2aaa1a3caf30800000000000000
+      internalID: 4588106006582503670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_129
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513b91a0a48cb3240800000000000000
+      internalID: 4772628450451763989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_130
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b14cdbd3e6e2370800000000000000
+      internalID: 8299692374746209122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_131
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97c69449e7a513e0800000000000000
+      internalID: -2083574632269035621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_132
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108577eacc01b4f80800000000000000
+      internalID: -8121379031746127871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_133
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f934972e3263479c0800000000000000
+      internalID: -3930457047036247137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_134
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31273ebbb33995080800000000000000
+      internalID: -9198158879162928621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_135
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69971e804a8d7d620800000000000000
+      internalID: 2798943892469283222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_136
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efab656526766dc0800000000000000
+      internalID: -3646096945322414111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_137
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e051363af6f514b0800000000000000
+      internalID: -5470194617860140825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_138
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93833718de81d4f0800000000000000
+      internalID: -805705799569276005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_139
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8982eecdb48e6f20800000000000000
+      internalID: 3417815117975423372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_140
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c237b1066df06660800000000000000
+      internalID: 7377174804190147270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_141
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171171d38bf286230800000000000000
+      internalID: 3632205567819714929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_142
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea67cc29202031850800000000000000
+      internalID: 6346418509971224238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_143
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 147
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7abf9f610fd71750800000000000000
+      internalID: 6275729803024775802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29999dd20640ab80800000000000000
+      internalID: -8385625528042153682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_145
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ede3108629e96b0800000000000000
+      internalID: -5287627937091232226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_146
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf452d159cde859d0800000000000000
+      internalID: -2785214920611703556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_147
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035011ff55f451020800000000000000
+      internalID: 2311841214494737712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_148
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa92e94dc55528b0800000000000000
+      internalID: -5177637856396272990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_149
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c3525dbbef3c7a0800000000000000
+      internalID: -6357958166228681648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_150
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea0a7b1fc7690b60800000000000000
+      internalID: 7712809976065559274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_151
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8885b8f52d976c240800000000000000
+      internalID: 4811667196345014408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_152
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b75aaaca9c49e4b0800000000000000
+      internalID: -5410709249600104527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_153
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f7c15c311864810800000000000000
+      internalID: 1749227427191357230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_154
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f980601db84eb5680800000000000000
+      internalID: -8765160960588117857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_155
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362626c6c8b040cc0800000000000000
+      internalID: -3745856292323696029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_156
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dec67ba0ed6d9d00800000000000000
+      internalID: 981061105553428184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_157
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafd05c8d8f1ea3d0800000000000000
+      internalID: -3193580392954142802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_158
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63aed301570b93b90800000000000000
+      internalID: -7261578907328058826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_159
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 126
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6ea352e58579b70800000000000000
+      internalID: 8905683949523232456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123caa292d1ad2f60800000000000000
+      internalID: 8011237237937849121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_161
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f1f75e74f89a7b0800000000000000
+      internalID: -5212477554748874910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_162
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a2c248ab4a36f50800000000000000
+      internalID: 6873518577285868185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_163
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d1a47ce3a618ab0800000000000000
+      internalID: -5007604492795241075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_164
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0dc7a0ffc10c6fd0800000000000000
+      internalID: -2347499313159484148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_165
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c1d4791e6dba880800000000000000
+      internalID: -8598542799139431284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_166
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376e831c025676020800000000000000
+      internalID: 2334946123169982067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_167
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b43900424072ea0800000000000000
+      internalID: -5897740634343388277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_168
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2379935a24a8e06a0800000000000000
+      internalID: -6481090794895075534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_169
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8c3a7139b46ffc0800000000000000
+      internalID: -3461496168458762047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_170
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a106d333f6bef20800000000000000
+      internalID: 3452975805173340793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_171
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d0cb1bb94774990800000000000000
+      internalID: -7401819250509476495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_172
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a451e174a690f720800000000000000
+      internalID: 2877965794919142566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_173
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6bc9ca4e1060a90800000000000000
+      internalID: -7348183660348262714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_174
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eef553cec23911c0800000000000000
+      internalID: -4532535686349848863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_175
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ce04cd912d6c0d0800000000000000
+      internalID: -3402801459920573391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa073b7b632ead70800000000000000
+      internalID: 9056214845224323836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_177
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53633a09b452fcd0800000000000000
+      internalID: -2525863287284604068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_178
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae507b0302041ce70800000000000000
+      internalID: 9133652026284508650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_179
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910013d1ab34ddf80800000000000000
+      internalID: -8080227689800073191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_180
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc51190d28ab3de0800000000000000
+      internalID: -1352302351715574595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_181
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac062a24488479a70800000000000000
+      internalID: 8833608927001338058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_182
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d7621f32e7a2400800000000000000
+      internalID: 300191018008345935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_183
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaffbc05e682ce200800000000000000
+      internalID: 210587736846630830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_184
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574628bc85325d0b0800000000000000
+      internalID: -5704614488716450699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_185
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35e9ac98cb65b570800000000000000
+      internalID: 8481803982588208444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_186
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b518d5bfda7234e0800000000000000
+      internalID: -2003403782979316297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_187
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a1d640110f96740800000000000000
+      internalID: 5145908005126871665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_188
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100315a6539c3d7c0800000000000000
+      internalID: -4047670408821788671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_189
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56363faba8d5e1240800000000000000
+      internalID: 4764348306227946341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_190
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b05658077b801290800000000000000
+      internalID: -7921678401187458889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_191
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3aa92963004d330800000000000000
+      internalID: 3734610225384825796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_192
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80d18b9273593890800000000000000
+      internalID: -7477853954571644785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_193
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d333df6a9a0b9ab0800000000000000
+      internalID: -5000391302847450153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_194
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc21bc1420651d490800000000000000
+      internalID: -7723297318269938996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_195
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e8b9d647ec2ed70800000000000000
+      internalID: 9071039598928039439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_196
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce5a3268fe20a230800000000000000
+      internalID: 3647967342504861378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_197
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883d7994bc1ffb210800000000000000
+      internalID: 1351064268649780104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_198
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e064bc6e021d6bd0800000000000000
+      internalID: -2635430353779269403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_199
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8991bae6f083e18a0800000000000000
+      internalID: -6332562387103966824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_200
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7163962c8ca61e740800000000000000
+      internalID: 5179538456940459543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_201
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b85c7683100b630800000000000000
+      internalID: 3940651015719979873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_202
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7782c5a171b8d6f0800000000000000
+      internalID: -659582243739367554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_203
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3999872f8a5a708e0800000000000000
+      internalID: -1727229787032217197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_204
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd50a14a8cb4f1010800000000000000
+      internalID: 1161730554003588575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_205
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed922d188e744b30800000000000000
+      internalID: 4270677469723532776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_206
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e635cf0c7d2572380800000000000000
+      internalID: -8996130644040068242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_207
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 63
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ca7ecede7783270800000000000000
+      internalID: 8230460182785141903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_208
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f43eb47d439d210800000000000000
+      internalID: 1358174861924716320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_209
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3d6c01efe38f510800000000000000
+      internalID: 1583084529944810445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_210
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53b169123ece30e0800000000000000
+      internalID: -2288164846088113315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_211
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420cfbf6ca9f31420800000000000000
+      internalID: 2599695928927436836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_212
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bcaf9e7d1bc6fc0800000000000000
+      internalID: -3500227269472105591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_213
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8630643452c78170800000000000000
+      internalID: 8180720915053557386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_214
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5403674dc9223f260800000000000000
+      internalID: 7130080692032385093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_215
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a00d5ab9eabcfd0800000000000000
+      internalID: -2320569199454320023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_216
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f251dfe644382e70800000000000000
+      internalID: 9090573327123174137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_217
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23900cbfcf2577230800000000000000
+      internalID: 3636466470633867570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_218
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc546a909b0ad5b0800000000000000
+      internalID: -5342945292228207396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_219
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c46fac0cde1d250800000000000000
+      internalID: 5967812393537260633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_220
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c368cd6cd3c35d0800000000000000
+      internalID: -3081520120715658188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_221
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd0fdad0461e4770800000000000000
+      internalID: 8596833206502624755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_222
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bced138135cce80800000000000000
+      internalID: -8157053461693805711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_223
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 42
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b667378c235278c00800000000000000
+      internalID: 902731150352676459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f36e618e7175700800000000000000
+      internalID: 528917766823362416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_225
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4607714335eb57a80800000000000000
+      internalID: -8469654259634835356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_226
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b84613cb40a20d50800000000000000
+      internalID: 6702095442736728244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_227
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0ea80b2d16d9030800000000000000
+      internalID: 3503063642697031864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_228
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408747d3db6da6060800000000000000
+      internalID: 6947601483440617476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_229
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a4df54afb69a0c0800000000000000
+      internalID: -4563998024703063508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_230
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4f30ed60bff2cd0800000000000000
+      internalID: -2580568054546828057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_231
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e40da6bb43747330800000000000000
+      internalID: 3707715162257294561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_232
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37869fbca8146720800000000000000
+      internalID: 2838420795378009918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_233
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef4956d0f0700490800000000000000
+      internalID: -7782095976405577749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_234
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9a7dbb321941f20800000000000000
+      internalID: 3392496001978182103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_235
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c736068d01bce9040800000000000000
+      internalID: 4656382337957782396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_236
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ab834d9927209f0800000000000000
+      internalID: -503714203296024038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_237
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94add21d1b2e54160800000000000000
+      internalID: 7009257648418576969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_238
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536c345f473400970800000000000000
+      internalID: 8719043048199407157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_239
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 21
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bf6d1117366ebf0800000000000000
+      internalID: -295439388264432882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_240
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4177b8cec0dc79b20800000000000000
+      internalID: 3141204720506074900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_241
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f792ad5c751c11060800000000000000
+      internalID: 6922526684970887551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_242
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5241011636aece910800000000000000
+      internalID: 1868125658003018789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_243
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a502eae121bd1420800000000000000
+      internalID: 2602430918922732969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_244
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698f24c5442e775b0800000000000000
+      internalID: -5370575247382480746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_245
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2309e6cf8769250800000000000000
+      internalID: 5951076983198724783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_246
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b57cb43653850e20800000000000000
+      internalID: 3316201106903430581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_247
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2fe4b10d39d0c10800000000000000
+      internalID: 2021434329779860204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_248
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11d1bf2819303c30800000000000000
+      internalID: 4337029217199968542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_249
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca01d0320fb2ba70800000000000000
+      internalID: 8841339034611550923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_250
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05c8fd4db8ae6a00800000000000000
+      internalID: 751723718827885839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_251
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b618e9f76804c830800000000000000
+      internalID: 4090403604226643632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_252
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710f3803f86761cc0800000000000000
+      internalID: -3740672083118264297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_253
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e38bbd52a9c3300800000000000000
+      internalID: 233230768107175471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_254
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee72e26149295efd0800000000000000
+      internalID: -2313281668859942930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGlobeHalf_255
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de0246b72f08aeb0800000000000000
+      internalID: -4708496747179929903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
