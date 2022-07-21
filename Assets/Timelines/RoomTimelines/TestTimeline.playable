@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviour:
     start: 0
-    end: 18.616666665602
+    end: 18.616666656564
     id: 0
 --- !u!114 &-5814900597925486164
 MonoBehaviour:
@@ -342,7 +342,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -6931066291094580937}
-    m_Duration: 18.616666665602
+    m_Duration: 18.616666656564
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1211475955049326532}
     m_EaseInDuration: 0
@@ -885,35 +885,8 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.016666668
-        value: 0.1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.6666666
-        value: 0.05810371
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 3.3666666
-        value: 0.09892152
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 5
-        value: 0.061598063
+        time: 0
+        value: 0.01
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1221,35 +1194,8 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.016666668
-        value: 0.1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.6666666
-        value: 0.05810371
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 3.3666666
-        value: 0.09892152
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 5
-        value: 0.061598063
+        time: 0
+        value: 0.01
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1886,11 +1832,11 @@ MonoBehaviour:
     end: 5.016666666666667
     id: 0
     ProjectilePrefab: {fileID: 8841699598713729355, guid: 0f551be8e27b097479e5473b72406f5b, type: 3}
-    Scale: 0.098696955
-    TimeToLive: 5.359054
-    CoolOffTime: 0.07188308
-    AutoFire: 0
-    Direction: {x: -0.3507054, y: 0.9327849}
+    Scale: 0.20938541
+    TimeToLive: 7.5624504
+    CoolOffTime: 0.01
+    AutoFire: 1
+    Direction: {x: 0.89735013, y: 0.44770384}
     Speed: 1
     MaxSpeed: 100
     RotationSpeed: 0
@@ -1972,10 +1918,10 @@ MonoBehaviour:
       m_NumColorKeys: 5
       m_NumAlphaKeys: 2
     UseColorPulse: 0
-    PulseSpeed: 10
+    PulseSpeed: 0.1
     UseStaticPulse: 0
     GroupCount: 3
-    GroupSpacing: 1
+    GroupSpacing: 0.49
     SpokeCount: 3
     SpokeSpacing: 25
     MirrorPairRotation: 0
