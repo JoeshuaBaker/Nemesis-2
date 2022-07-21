@@ -240,7 +240,7 @@ MonoBehaviour:
   bodyRenderer: {fileID: 4316206238441668970}
   limbRenderer: {fileID: 3939555228529853539}
   spriteSheetDirectory: Sprites/Sprite_Player/Player/
-  bodySpriteName: OJMechPlayerBody.png
+  bodySpriteName: OJMechPlayerBody
   limbSpriteName:
   - OJMechGeneralArmLegLeft2
   - OJMechGeneralArmLegLeft1
