@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,12 @@ using BulletHell;
 
 public class Player : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer bodyRenderer;
+    public SpriteRenderer limbRenderer;
     public string spriteSheetDirectory;
+    public string bodySpriteName;
+    public string[] limbSpriteName;
+    public float limbTransitionTime = 0.5f;
     public Transform hpBar;
     public ProjectileEmitterAdvanced[] guns;
     public int maxHp = 100;
@@ -15,17 +20,34 @@ public class Player : MonoBehaviour
     public int currentHp = 100;
     public float fastVel = 1.5f;
     public float slowVel = 0.5f;
+    private float slowFastRatio = 0.5f / 1.5f;
+    public float leftRightDrift = 0f;
     private Vector2 currentVel = new Vector2(0f, 0f);
-    private Sprite[] sprites;
+    public Sprite[] bodySprites;
+    public Sprite[][] limbSprites;
     private Vector2[] vectors;
     private Vector2 mouseDirection;
     public AK.Wwise.Event clapEvent;
 
     private void Start() {
         currentHp = maxHp;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        sprites = Resources.LoadAll<Sprite>(spriteSheetDirectory);
-        vectors = new Vector2[sprites.Length];
+        slowFastRatio = slowVel / fastVel;
+
+        if(bodyRenderer == null || limbRenderer == null)
+        {
+            Debug.LogError("Setup spriterenderers on Player " + this.name);
+        }
+
+        string bodyPath = spriteSheetDirectory + bodySpriteName;
+        bodySprites = Resources.LoadAll<Sprite>(bodyPath);
+
+        limbSprites = new Sprite[limbSpriteName.Length][];
+        for(int i = 0; i < limbSprites.Length; i++)
+        {
+            limbSprites[i] = Resources.LoadAll<Sprite>(spriteSheetDirectory + limbSpriteName[i]);
+        }
+
+        vectors = new Vector2[bodySprites.Length];
         float degrees = 360.0f/(float)vectors.Length;
         float currentDegrees = 0;
         for(int i = 0; i < vectors.Length; i++)
@@ -78,10 +100,28 @@ public class Player : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             currentVel = holdDirection * slowVel;
+            leftRightDrift += holdDirection.x * slowFastRatio * Time.deltaTime;
         }
         else
         {
             currentVel = holdDirection * fastVel;
+            leftRightDrift += holdDirection.x * Time.deltaTime;
+        }
+
+        if(holdDirection.x == 0 && leftRightDrift != 0f)
+        {
+            if(Math.Abs(leftRightDrift) < Time.deltaTime)
+            {
+                leftRightDrift = 0f;
+            }
+            else if(leftRightDrift > 0f)
+            {
+                leftRightDrift -= Time.deltaTime;
+            }
+            else
+            {
+                leftRightDrift += Time.deltaTime;
+            }
         }
 
         this.transform.position = new Vector3(
@@ -94,30 +134,16 @@ public class Player : MonoBehaviour
     private void MouseAim()
     {
         int dir = 1;
-        foreach(var gun in guns)
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = -Camera.main.transform.position.z;
+        Vector3 worldMouse = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector3 dirToMouse = worldMouse - this.transform.position;
+        Vector2 xy = new Vector2(dirToMouse.x, dirToMouse.y);
+        xy = xy.normalized;
+        mouseDirection = xy;
+
+        foreach (var gun in guns)
         {
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = -Camera.main.transform.position.z;
-            Vector3 worldMouse = Camera.main.ScreenToWorldPoint(mousePos);
-            Vector3 dirToMouse = worldMouse - this.transform.position;
-            Vector2 xy = new Vector2(dirToMouse.x, dirToMouse.y);
-            xy = xy.normalized;
-
-            this.mouseDirection = xy;
-            float lowestDist = float.MaxValue;
-            int lowestIndex = -1;
-            for(int i = 0; i < vectors.Length; i++)
-            {
-                float dx = vectors[i].x - xy.x;
-                float dy = vectors[i].y - xy.y;
-                float dist = Mathf.Abs(dx) + Mathf.Abs(dy);
-                if(dist < lowestDist)
-                {
-                    lowestDist = dist;
-                    lowestIndex = i;
-                }
-            }
-
             if(isSplit)
             {
                 Vector2 offset = new Vector2(xy.y*dir, -xy.x*dir);
@@ -127,13 +153,65 @@ public class Player : MonoBehaviour
                 xy = xy.normalized;
             }
 
-            spriteRenderer.sprite = sprites[lowestIndex];
             gun.transform.localPosition = xy/3;
             gun.props.Direction = xy;
             if(isSplit)
                 dir *= -1;
         }
-        
+
+        DrawSprites();
+
+    }
+
+    private void DrawSprites()
+    {
+        float lowestDist = float.MaxValue;
+        int lowestIndex = -1;
+        for (int i = 0; i < vectors.Length; i++)
+        {
+            float dx = vectors[i].x - mouseDirection.x;
+            float dy = vectors[i].y - mouseDirection.y;
+            float dist = Mathf.Abs(dx) + Mathf.Abs(dy);
+            if (dist < lowestDist)
+            {
+                lowestDist = dist;
+                lowestIndex = i;
+            }
+        }
+
+        //body sprite selection
+        bodyRenderer.sprite = bodySprites[lowestIndex];
+
+        //limb sprite direction
+        float ceil = limbTransitionTime * (limbSprites.Length / 2) + 0.01f;
+        float floor = -1 * ceil;
+        leftRightDrift = Mathf.Clamp(leftRightDrift, floor, ceil);
+        int regionsSearched = 0;
+        float region = limbTransitionTime;
+        while(Math.Abs(leftRightDrift) > Math.Abs(region))
+        {
+            region += limbTransitionTime;
+            regionsSearched++;
+        }
+
+        int index = limbSprites.Length / 2;
+        if(leftRightDrift > 0)
+        {
+            index += regionsSearched;
+        }
+        else
+        {
+            index -= regionsSearched;
+        }
+
+        if(index < 0 || index > limbSprites.Length)
+        {
+            Debug.LogError("Could not find limb lookup for leftRightDrift value of " + leftRightDrift);
+            return;
+        }
+
+        Sprite[] limbDriftSprites = limbSprites[index];
+        limbRenderer.sprite = limbDriftSprites[lowestIndex];
     }
 
     private void Shoot()
