@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3453500415576585352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.757, y: 0.879, z: 0.956423}
+  m_LocalPosition: {x: 0.025267474, y: 0.3323743, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,94 +43,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bc4bb09dfa0bc4aa26ec6beb158f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 8841699598713729355, guid: 4fedefd988960d247aaa18371098f2c1,
-    type: 3}
-  INTERVAL: 0.3
-  Direction: {x: 1, y: 1}
-  TimeToLive: 30
-  Speed: 1.63
-  MaxSpeed: 10
-  Scale: 0.08
-  Color:
-    serializedVersion: 2
-    key0: {r: 0.6226415, g: 0, b: 0, a: 1}
-    key1: {r: 0.3679245, g: 0, b: 0, a: 1}
-    key2: {r: 0.91039276, g: 1, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  RotationSpeed: 0
-  AutoFire: 1
-  BounceOffSurfaces: 1
-  CullProjectilesOutsideCameraBounds: 1
-  CollisionDetection: 1
-  ProjectilePoolSize: 5000
-  DrawOutlines: 1
-  OutlineSize: 0.03
-  OutlineColor:
-    serializedVersion: 2
-    key0: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
-    key1: {r: 0.8396226, g: 0.50016683, b: 0.14653791, a: 1}
-    key2: {r: 0.91039276, g: 1, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 30647
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
-  Gravity: {x: 0, y: 0}
-  BounceAbsorbtionY: 0
-  BounceAbsorbtionX: 0
-  Acceleration: 0
-  UseColorPulse: 1
-  PulseSpeed: 25
-  UseStaticPulse: 1
-  GroupCount: 1
-  SpokeCount: 1
-  SpokeSpacing: 1
-  MirrorRotation: 0
-  UseFollowTarget: 0
-  Target: {fileID: 0}
-  FollowIntensity: 0.6
-  UseOutlineColorPulse: 1
-  OutlinePulseSpeed: 0
-  UseOutlineStaticPulse: 0
+  props:
+    start: 0
+    end: 0
+    id: 0
+    ProjectilePrefab: {fileID: 0}
+    Scale: 0.05
+    TimeToLive: 5
+    CoolOffTime: 0.1
+    AutoFire: 1
+    Direction: {x: 0.07580242, y: 0.9971229}
+    Speed: 1
+    MaxSpeed: 100
+    RotationSpeed: 0
+    CollisionDetection: 1
+    BounceOffSurfaces: 1
+    CullProjectilesOutsideCameraBounds: 1
+    IsFixedTimestep: 1
+    FixedTimestepRate: 0.01
+    spawnTime: 0
+    DrawOutlines: 0
+    OutlineSize: 0
+    OutlineColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    UseOutlineColorPulse: 0
+    OutlinePulseSpeed: 0
+    UseOutlineStaticPulse: 0
+    Gravity: {x: 0, y: 0}
+    BounceAbsorbtionY: 0
+    BounceAbsorbtionX: 0
+    Acceleration: 0
+    UseFollowTarget: 0
+    Target: {fileID: 0}
+    FollowTargetType: 0
+    FollowIntensity: 0
+    Color:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    UseColorPulse: 0
+    PulseSpeed: 0
+    UseStaticPulse: 0
+    GroupCount: 1
+    GroupSpacing: 1
+    SpokeCount: 3
+    SpokeSpacing: 25
+    MirrorPairRotation: 0
+    PairGroupDirection: 0
