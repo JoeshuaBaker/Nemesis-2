@@ -1,0 +1,3 @@
+Camera distance: -3.1175
+"native" Screen Resolution: 640x360
+Supported Screen Resolutions: Any 16:9
