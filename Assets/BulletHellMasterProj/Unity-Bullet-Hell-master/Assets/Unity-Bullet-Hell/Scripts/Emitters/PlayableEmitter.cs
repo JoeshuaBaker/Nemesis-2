@@ -1,4 +1,3 @@
-using System;
 using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +20,7 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
     public List<TimelineProperties> timelineProperties;
     public List<EmitterShootBehaviour> shootBehaviours;
     private EmitterProperties baseProps = null;
+    public AnimationCurve defaultLinearCurve;
     [SerializeField] public List<EmitterProperties> shootEvents;
     private float lastTime = 0f;
 
@@ -141,6 +141,7 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
         }
 
         Awake();
+        defaultLinearCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
         Debug.Log($"Build Finished.");
     }
 
@@ -188,6 +189,7 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
         foreach(var shot in shootEvents)
         {
             EmitterProperties props = shot;
+            //Debug.Log("Area under speedCurve: " + AreaUnderCurve(props.SpeedCurve, 1.0f, 1.0f));
             double spawnTime = props.spawnTime;
             if(IsProjectileAlive(props, spawnTime, time) && !activeProjectileIds.Contains(props.id))
             {
@@ -199,7 +201,7 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
 
     //Copied from ProjectileEmitterAdvanced. Called from UpdateProjectiles. Rewrite to use time.
     protected override void UpdateProjectile(ref Pool<ProjectileData>.Node node, float time)
-    {          
+    {
         // Projectile is active
         if (IsProjectileAlive(node.Item, time))
         {
@@ -210,11 +212,30 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
             //s = ut + (1/2)a t^2
             //s = position, u = velocity at t(0), t = time, a = constant accelleration
             //base velocity
-            node.Item.Position = node.Item.Velocity*dt;
+
+            //Debug.Log($"time: {time}, timeSpawned: {node.Item.TimeSpawned}, timeToLive: {node.Item.TimeToLive}");
+            float t1 = Mathf.Max(time - node.Item.TimeSpawned, 0)/node.Item.TimeToLive;
+            //Debug.Log($"t1: {t1}");
+
+            float turn = MinMaxArea(node.Item.TurningCurvesSelector, node.Item.TurningCurves, 0f, t1);
+            Vector2 baseDirection = node.Item.Velocity;
+
+            //float ceilRadians = node.Item.TurnCeil * Mathf.Deg2Rad;
+            //float floorRadians = node.Item.TurnFloor * Mathf.Deg2Rad;
+            //float a = Mathf.Atan2(Mathf.Sin(floorRadians - ceilRadians), Mathf.Cos(floorRadians - ceilRadians));
+            //a *= Mathf.Rad2Deg;
+            float degrees = node.Item.TurnCeil * turn * node.Item.TimeToLive;
+            Quaternion rotation = Quaternion.AngleAxis(degrees, Vector3.forward);
+            Vector2 rotatedDirection = rotation * baseDirection;
+
+            float move = MinMaxArea(node.Item.SpeedCurveSelector, node.Item.SpeedCurves, 0f, t1);
+            //Debug.Log($"area under curve scalar: {move}");
+            node.Item.Position = node.Item.InitialPosition + (node.Item.SpeedCeil - node.Item.SpeedFloor) * node.Item.TimeToLive * move * rotatedDirection;
+            //node.Item.Position = node.Item.Velocity*dt;
             //velocity change due to constant acceleration
-            node.Item.Position += new Vector2(0.5f * node.Item.Acceleration * (dt * dt), 0.5f * node.Item.Acceleration * (dt * dt))*node.Item.Velocity.normalized;
+            //node.Item.Position += new Vector2(0.5f * node.Item.Acceleration * (dt * dt), 0.5f * node.Item.Acceleration * (dt * dt))*node.Item.Velocity.normalized;
             //velocity change due to gravity
-            node.Item.Position += new Vector2(0.5f*node.Item.Gravity.x*(dt*dt), 0.5f*node.Item.Gravity.y*(dt*dt));
+            //node.Item.Position += new Vector2(0.5f*node.Item.Gravity.x*(dt*dt), 0.5f*node.Item.Gravity.y*(dt*dt));
 
             // follow target
             /*
@@ -319,6 +340,38 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
         }
     }
 
+    public float MinMaxArea(float selector, AnimationCurve[] curves, float t0, float t1)
+    {
+        float area;
+
+        if (curves == null || curves.Length == 0 || Mathf.RoundToInt(selector) >= curves.Length)
+        {
+            area = AreaUnderCurve(defaultLinearCurve, t0, t1);
+        }
+        else
+        {
+            float floor = Mathf.FloorToInt(selector);
+            float ceil = Mathf.CeilToInt(selector);
+            float tolerance = 0.01f;
+
+            if (Mathf.Abs(floor - ceil) < tolerance || Mathf.Abs(selector - floor) < tolerance)
+            {
+                area = AreaUnderCurve(curves[(int)floor], t0, t1);
+            }
+            else if (Mathf.Abs(selector - ceil) < 0.01f)
+            {
+                area = AreaUnderCurve(curves[(int)ceil], t0, t1);
+            }
+            else
+            {
+                float area1 = AreaUnderCurve(curves[(int)floor], t0, t1);
+                float area2 = AreaUnderCurve(curves[(int)ceil], t0, t1);
+                area = (area1 + area2) / 2.0f;
+            }
+        }
+        return area;
+    }
+
     public Pool<ProjectileData>.Node FireProjectile(EmitterProperties props, Vector2 direction, double spawnTime, float time)
     {
         Pool<ProjectileData>.Node node = new Pool<ProjectileData>.Node();
@@ -353,6 +406,14 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
                     node.Item.Target = props.Target;
                     node.Item.TimeSpawned = (float)spawnTime;
                     node.Item.emitterId = props.id;
+                    node.Item.SpeedFloor = props.SpeedFloor;
+                    node.Item.SpeedCeil = props.SpeedCeil;
+                    node.Item.SpeedCurves = props.SpeedCurves;
+                    node.Item.SpeedCurveSelector = props.speedCurveSelector;
+                    node.Item.TurnFloor = props.TurnFloor;
+                    node.Item.TurnCeil = props.TurnCeil;
+                    node.Item.TurningCurves = props.TurningCurves;
+                    node.Item.TurningCurvesSelector = props.TurningCurveSelector;
 
                     if (left)
                     {
@@ -467,7 +528,7 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
 
     private void SetFieldSafe(FieldInfo field, object snapshotProps, float f)
     {
-        Type type = field.FieldType;
+        System.Type type = field.FieldType;
         if(type == typeof(float))
         {
             field.SetValue(snapshotProps, f);
@@ -494,5 +555,177 @@ public class PlayableEmitter : ProjectileEmitterAdvanced
     private bool IsProjectileAlive(EmitterProperties projectile, double spawnTime, float time)
     {
         return time > spawnTime && time < spawnTime + projectile.TimeToLive;
+    }
+
+    public float AreaUnderCurve(AnimationCurve curve, float t0 = 0.0f, float t1 = 1.0f, float w = 1.0f, float h = 1.0f)
+    {
+        //Optimization Todo:
+        //1. Instead of making a list every frame, make it an array of Keyframes and precompute addition indices
+        //2. Pre-compute the coeffecients of the base curve once, rather than doing it every frame (though the added point will need to be calculated at runtime still).
+        float areaUnderCurve = 0f;
+        var keys = curve.keys;
+        List<Keyframe> keyList = new List<Keyframe>(keys);
+
+        bool t0Region;
+        bool t1Region;
+        int startIndex = -1;
+        int endIndex = -1;
+
+        float oneOverThree = 1f / 3f;
+        float two = 2.0f;
+        float three = 3.0f;
+        float four = 4.0f;
+        float six = 6.0f;
+
+        //System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+        //timer.Start();
+        for (int i = 0; i < keys.Length - 1; i++)
+        {
+            Keyframe K1 = keys[i];
+            Keyframe K2 = keys[i + 1];
+            if (t0 == K1.time)
+                startIndex = i;
+            if (t1 == K2.time)
+                endIndex = i + 1;
+
+            t0Region = t0 > K1.time && t0 < K2.time;
+            t1Region = t1 > K1.time && t1 < K2.time;
+
+            if (t0Region || t1Region)
+            {
+                Vector2 A = new Vector2(K1.time * w, K1.value * h);
+                Vector2 D = new Vector2(K2.time * w, K2.value * h);
+                float e = (D.x - A.x) / three;
+                float f = h / w;
+                Vector2 B = A + new Vector2(e, e * f * K1.outTangent);
+                Vector2 C = D + new Vector2(-e, -e * f * K2.inTangent);
+
+                float a, b, c;
+                a = -A.y + three * B.y - three * C.y + D.y;
+                b = three * A.y - six * B.y + three * C.y;
+                c = -three * A.y + three * B.y;
+
+                bool sameRegion = false;
+
+                if(t0Region)
+                {
+                    startIndex = i + 1;
+                    float slope = (three * a * t0 * t0) + (two * b * t0) + c;
+                    keyList.Insert(startIndex, new Keyframe(t0, curve.Evaluate(t0), slope, slope, oneOverThree, oneOverThree));
+                    sameRegion = true;
+                }
+                if (t1Region)
+                {
+                    endIndex = (sameRegion) ? i + 2 : i + 1;
+                    float slope = (three * a * t1 * t1) + (two * b * t1) + c;
+                    keyList.Insert(endIndex, new Keyframe(t1, curve.Evaluate(t1), slope, slope, oneOverThree, oneOverThree));
+                }
+            }
+        }
+        //timer.Stop();
+        //System.TimeSpan timeToAddKeys = timer.Elapsed;
+
+        if(startIndex == -1 || endIndex == -1)
+        {
+            Debug.LogWarning("When evaluating area under curve the start or end index was not set.\n" + 
+                $"t0: {t0}, startIndex: {startIndex}, t1:{t1}, endIndex: {endIndex}");
+        }
+           
+        //timer.Reset();
+        //timer.Start();
+        for (int i = startIndex; i < endIndex && i < keyList.Count - 1; i++)
+        {
+            // Calculate the 4 cubic Bezier control points from Unity AnimationCurve (a hermite cubic spline) 
+            Keyframe K1 = keyList[i];
+            Keyframe K2 = keyList[i + 1];
+            Vector2 A = new Vector2(K1.time * w, K1.value * h);
+            Vector2 D = new Vector2(K2.time * w, K2.value * h);
+            float e = (D.x - A.x) / three;
+            float f = h / w;
+            Vector2 B = A + new Vector2(e, e * f * K1.outTangent);
+            Vector2 C = D + new Vector2(-e, -e * f * K2.inTangent);
+
+            /*
+             * The cubic Bezier curve function looks like this:
+             * 
+             * f(x) = A(1 - x)^3 + 3B(1 - x)^2 x + 3C(1 - x) x^2 + Dx^3
+             * 
+             * Where A, B, C and D are the control points and, 
+             * for the purpose of evaluating an instance of the Bezier curve, 
+             * are constants. 
+             * 
+             * Multiplying everything out and collecting terms yields the expanded polynomial form:
+             * f(x) = (-A + 3B -3C + D)x^3 + (3A - 6B + 3C)x^2 + (-3A + 3B)x + A
+             * 
+             * If we say:
+             * a = -A + 3B - 3C + D
+             * b = 3A - 6B + 3C
+             * c = -3A + 3B
+             * d = A
+             * 
+             * Then we have the expanded polynomal:
+             * f(x) = ax^3 + bx^2 + cx + d
+             * 
+             * Whos indefinite integral is:
+             * a/4 x^4 + b/3 x^3 + c/2 x^2 + dx + E
+             * Where E is a new constant introduced by integration.
+             * 
+             * The indefinite integral of the quadratic Bezier curve is:
+             * (-A + 3B - 3C + D)/4 x^4 + (A - 2B + C) x^3 + 3/2 (B - A) x^2 + Ax + E
+             */
+
+            float a, b, c, d;
+            a = -A.y + three * B.y - three * C.y + D.y;
+            b = three * A.y - six * B.y + three * C.y;
+            c = -three * A.y + three * B.y;
+            d = A.y;
+
+            /* 
+             * a, b, c, d, now contain the y component from the Bezier control points.
+             * In other words - the AnimationCurve Keyframe value * h data!
+             * 
+             * What about the x component for the Bezier control points - the AnimationCurve
+             * time data?  We will need to evaluate the x component when time = 1.
+             * 
+             * x^4, x^3, X^2, X all equal 1, so we can conveniently drop this coeffiecient.
+             * 
+             * Lastly, for each segment on the AnimationCurve we get the time difference of the 
+             * Keyframes and multiply by w.
+             * 
+             * Iterate through the segments and add up all the areas for 
+             * the total area under the AnimationCurve!
+             */
+
+            float t = (K2.time - K1.time) * w;
+
+            // Define A and D...
+
+            float area;  // just renamed area since it also works for negative values
+
+            // If this portion of the curve is constant (i.e. either this key has a right tangent constant,
+            // or the next key has a left tangent constant), compute the integral directly as the signed area of a rectangle
+            if (float.IsInfinity(K1.outTangent) || float.IsInfinity(K2.inTangent))
+            {
+                area = A.y * (D.x - A.x);
+            }
+            else
+            {
+                // computation for non-constant tangents...
+                area = ((a / four) + (b / three) + (c / two) + d) * t;
+            }
+            areaUnderCurve += area;
+        }
+        //timer.Stop();
+        //System.TimeSpan timeToCompute = timer.Elapsed;
+
+        //timer.Reset();
+        //timer.Start();
+        //timer.Stop();
+        //System.TimeSpan timeToRemove = timer.Elapsed;
+
+        //Debug.Log($"Time to add keys: {timeToAddKeys.TotalMilliseconds} ms.");
+        //Debug.Log($"Time to compute: {timeToCompute.TotalMilliseconds} ms.");
+        //Debug.Log($"Time to remove keys: {timeToRemove.TotalMilliseconds} ms.");
+        return areaUnderCurve;
     }
 }

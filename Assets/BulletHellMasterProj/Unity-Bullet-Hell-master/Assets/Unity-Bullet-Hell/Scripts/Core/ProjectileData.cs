@@ -16,6 +16,14 @@ namespace BulletHell
         public float TimeSpawned;
         public float TimeToLive;
         public float Speed;
+        public float SpeedFloor;
+        public float SpeedCeil;
+        public AnimationCurve[] SpeedCurves;
+        public float SpeedCurveSelector;
+        public float TurnFloor;
+        public float TurnCeil;
+        public AnimationCurve[] TurningCurves;
+        public float TurningCurvesSelector;
 
         public ColorPulse Pulse;
         public ColorPulse OutlinePulse;

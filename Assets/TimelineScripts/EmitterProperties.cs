@@ -9,8 +9,21 @@ using UnityEngine.Playables;
 public class EmitterProperties : EmitterTrackBehaviour
 {
     public ProjectilePrefab ProjectilePrefab;
-    
+
     //General
+    [FoldoutGroup("New Props")]
+    public BezierCurve1D speed;
+    [FoldoutGroup("New Props")]
+    public Vector2 speedMinMax = new Vector2(0, 1);
+    [FoldoutGroup("New Props")]
+    public BezierCurve1D rotation;
+    [FoldoutGroup("New Props")]
+    public Vector2 rotationMinMax = new Vector2(0, 1);
+    [FoldoutGroup("New Props")]
+    public BezierCurve1D scale;
+    [FoldoutGroup("New Props")]
+    public Vector2 scaleMinMax = new Vector2(0, 1);
+
     [FoldoutGroup("General")] [Range(0.01f, 2f)] 
     public float Scale = 0.05f;
     [FoldoutGroup("General")] 
@@ -24,7 +37,23 @@ public class EmitterProperties : EmitterTrackBehaviour
     [FoldoutGroup("General")] [Range(0.001f, 10f)] 
     public float Speed = 1;
     [FoldoutGroup("General")] [Range(1f, 100f)] 
-    public float MaxSpeed = 100;        
+    public float MaxSpeed = 100;
+    [FoldoutGroup("General")]
+    public float SpeedFloor = 0.0f;
+    [FoldoutGroup("General")]
+    public float SpeedCeil = 1.0f;
+    [FoldoutGroup("General")]
+    public AnimationCurve[] SpeedCurves;
+    [FoldoutGroup("General")]
+    public float speedCurveSelector;
+    [FoldoutGroup("General")]
+    public float TurnFloor = 0f;
+    [FoldoutGroup("General")]
+    public float TurnCeil = 0f;
+    [FoldoutGroup("General")]
+    public AnimationCurve[] TurningCurves;
+    [FoldoutGroup("General")]
+    public float TurningCurveSelector;
     [FoldoutGroup("General")] 
     public float RotationSpeed = 0;        
     [FoldoutGroup("General")] 
@@ -108,6 +137,8 @@ public class EmitterProperties : EmitterTrackBehaviour
         var copy = (EmitterProperties) this.MemberwiseClone();
         copy.Gravity = new Vector2(Gravity.x, Gravity.y);
         copy.Direction = new Vector2(Direction.x, Direction.y);
+        copy.SpeedCurves = this.SpeedCurves;
+        copy.TurningCurves = this.TurningCurves;
         return copy;
     }
     
